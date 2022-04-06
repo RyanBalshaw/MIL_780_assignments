@@ -22,11 +22,17 @@
 \usepackage{caption}
 \usepackage{subcaption}
 
+%For different coloured text
+\usepackage{xcolor}
+
 %For the bibliography
 \usepackage[backend=biber,
-            citestyle=numeric,
-            sortcites=true]{biblatex}
-            
+			  style=ieee,
+            sortcites=true,
+            sorting=none]{biblatex}
+
+%citestyle=numeric-comp,
+%bibstyle=authoryear,       
 \addbibresource{Bibliography.bib}
 
 \title{MIL 780 - Assignment 1}
@@ -36,6 +42,9 @@
 \begin{document}
 
 \maketitle
+
+\section*{Foreword}
+All code, documents and work relevant to this assignment can be found in my \href{https://github.com/RyanBalshaw/MIL_780_assignments}{\textcolor{blue}{Github repository}}.
 
 \section{Question 1}
 
@@ -218,7 +227,7 @@ The function within the expectation $\mathbb{E}\{ f(x) \}$ is not only limited t
 \begin{equation}\label{eq:Q1_complex_function}
     f(x) = \vert e^x \cdot \cos \left( x^2 \right) \vert,
 \end{equation}
-where $\vert \cdot \vert$ is the absolute value function. We can determine the definite integral that the expectation represents with two methods, namely \emph{i)} numerical quadrature and \emph{ii)} Monte Carlo integration using Equation \eqref{eq:MonteCarlo}. In table \ref{tab:complex_expectations} the results from the two methods are given. As was shown for the previous Monte Carlo integration sections, Figure \ref{fig:Q1a_6} was developed to show the sensitivity of the Monte Carlo estimate of the expectation of Equation \eqref{eq:Q1_complex_function}. It is clear that the number of samples is important to this expectation, as if the number of samples is too low both the estimate variance and the estimation error is high.
+where $\vert \cdot \vert$ is the absolute value function. We can determine the definite integral that the expectation represents with two methods, namely \emph{i)} numerical quadrature and \emph{ii)} Monte Carlo integration using Equation \eqref{eq:MonteCarlo}. In table \ref{tab:complex_expectations} the results from the two methods are given. As was shown for the previous Monte Carlo integration sections, Figure \ref{fig:Q1a_7} was developed to show the sensitivity of the Monte Carlo estimate of the expectation of Equation \eqref{eq:Q1_complex_function}. It is clear that the number of samples is important to this expectation, as if the number of samples is too low both the estimate variance and the estimation error is high.
 \begin{table}[!htb]
 \centering
 \caption{The calculation of $\mathbb{E}\{ \vert e^x \cdot \cos \left( x^2 \right) \vert\}$, using numerical quadrature and Monte Carlo integration.}
@@ -245,7 +254,7 @@ Monte Carlo integration & 791.683632 \\ \bottomrule
          \caption{Estimation error.}
      \end{subfigure}
         \caption{The expected value of the Monte Carlo estimate of $\mathbb{E}_{x\sim p(x)}\{\vert e^x \cdot \cos \left( x^2 \right) \vert \}$ and the estimation error as a function of the number of samples. In a) we see that the variance around the estimate decreases with sample number. In b) we see an increase in the accuracy of the estimate as the number of samples increase.}
-        \label{fig:Q1a_6}
+        \label{fig:Q1a_7}
 \end{figure}
 
 \subsubsection{Log-likelihood calculations}
@@ -408,7 +417,7 @@ and let estimator two be
     \sigma_2 = \frac{1}{N - 1}\sum_{n=1}^{N} \left( x_n - \hat{\mu} \right)^2.
 \end{equation}
  
- In Figure \ref{fig:Q1c_2}, the bias of the and the variance of this bias as a function of the number of samples used to perform Monte Carlo integration is shown. Figure \ref{fig:Q1c_2}a) has a clear bias expectation offset, while Figure \ref{fig:Q1c_2}b) has a bias expectation term equal to 0. Figure \ref{fig:Q1c_2} clearly shows that estimator two is the unbiased estimator for $\sigma_2$. However, an unbiased estimator is not optimal when maximising the log-likelihood function, and thus the decision to bias or unbias the estimator depends on how the model is applied. If the model is used to provide intuition or interpretation to some data, then the unbiased estimate is preferred. However, in cases where the model is used to evaluate whether new data is from the observed data, then increasing unbiasing the variance could potentially cause problems. The variance around the bias was determined by repeating the bias estimation process numerous times. This variance is present as the bias is a random variable due to the dependence on $\mathbb{E}\left(\hat{\sigma}_{i}\right)$, where $i = 1, 2$, which is a function of the data.
+ In Figure \ref{fig:Q1c_2}, the bias of the estimators and the variance of these biases as a function of the number of samples used to perform Monte Carlo integration is shown. Figure \ref{fig:Q1c_2}a) has a clear bias expectation offset, while Figure \ref{fig:Q1c_2}b) has a bias expectation term equal to 0. Figure \ref{fig:Q1c_2} clearly shows that estimator two is the unbiased estimator for $\sigma_2$. However, an unbiased estimator is not optimal when maximising the log-likelihood function, and thus the decision to bias or unbias the estimator depends on how the model is applied. If the model is used to provide intuition or interpretation to some data, then the unbiased estimate is preferred. However, in cases where the model is used to evaluate whether new data is from the observed data, then increasing unbiasing the variance could potentially cause problems. The variance around the bias was determined by repeating the bias estimation process numerous times. This variance is present as the bias is a random variable due to the dependence on $\mathbb{E}\left(\hat{\sigma}_{i}\right)$, where $i = 1, 2$, which is a function of the data.
  \begin{figure}[!htb]
      \centering
      \begin{subfigure}[b]{0.45\textwidth}
@@ -523,7 +532,7 @@ First, let us derive $\mathcal{L}(\boldsymbol\omega, \sigma^2)$ with respect to 
 &= \sum_{n=1}^{N} t_n \boldsymbol\phi^T(x_n) - \boldsymbol\omega^t \sum_{n=1}^{N} \boldsymbol\phi(x_n) \boldsymbol\phi^T(x_n),
 \end{aligned}
 \end{equation}
-where the derivative $\frac{df}{d\boldsymbol\omega}$ can be found using Equation (69) from the The Matrix Cookbook \cite{Petersen2006TheMC}. Now, let us think about what the observed equation tells us. In the first term we are weighting  $\boldsymbol\phi^T(x_n)$ by $t_n$, and this can be easily expanded into a vector form through
+where the derivative $\frac{df}{d\boldsymbol\omega}$ can be found using Equation (69) from \textcite{Petersen2006TheMC}. Now, let us think about what the observed equation tells us. In the first term we are weighting  $\boldsymbol\phi^T(x_n)$ by $t_n$, and this can be easily expanded into a vector form through
 \begin{equation}
 \begin{bmatrix}
 t_1  & t_2  & \vdots & t_N \\
@@ -813,7 +822,7 @@ Furthermore, the variance of the model is given as
 
 For this investigation, the results of the bias-variance Monte Carlo estimation process is given in Figure \ref{fig:Q2b_3}. Note that for this investigation, the model variance was a free parameter. In Figure \ref{fig:Q2b_3}a) the model variance of the different metrics is shown. It is clear that the NLL and MSE results are bear a large number of similarities, and the AIC and BIC results are very similar. The AIC and BIC bias is the same form as the data, which is a result of the optimal model order that was selected, which was often a zero-th order polynomial. Hence, the bias is merely a centered version of the data, as we model determines the constant offset term alone. The NLL and MSE bias appears to be the worst at the end conditions, and fluctuates at the sections in the data with sharpest gradient changes. 
 
-In figure \ref{fig:Q2b_3}b) the variance is shown for the four metrics. The variance in the AIC and BIC metrics is constant as the optimal model order is zero, and thus the variance is simply a function of how the constant offset term is estimated. For the NLL and MSE metrics, there is a large variance at the right-most section of the data, which suggests that the models vary heavily as a function of the sampled data in this region. In figure \ref{fig:Q2b_3} the bias-variance ratio is shown and the result of normalising the bias indicates that the model varies strongly around the regions of strong gradient change in the data.
+In figure \ref{fig:Q2b_3}b) the variance is shown for the four metrics. The variance in the AIC and BIC metrics is constant as the optimal model order is zero, and thus the variance is simply a function of how the constant offset term is estimated. For the NLL and MSE metrics, there is a large variance at the right-most section of the data, which suggests that the models vary heavily as a function of the sampled data in this region. In figure \ref{fig:Q2b_3}c) the bias-variance ratio is shown and the result of normalising the bias indicates that the model varies strongly around the regions of strong gradient change in the data.
 
 \begin{figure}[!htb]
      \centering
@@ -1019,7 +1028,7 @@ As shown in Table \ref{tab:Q3b_table1}, the estimate $\hat{\theta}_1$ is similar
          \includegraphics[width=\textwidth]{Q3b_fig8.png}
          \caption{Sample negative log-likelihood.}
      \end{subfigure}
-        \caption{The optimal Gaussian and Laplacian models fitted to the sampled data in Figure \ref{fig:Q3b_1}. a) shows the the Gaussian model, b) shows the Laplacian model, and c) shows the sample negative log-likelihood for both models.}
+        \caption{The optimal Gaussian and Laplacian models fitted to the sampled data in Figure \ref{fig:Q3b_1}. a) shows the Gaussian model, b) shows the Laplacian model, and c) shows the sample negative log-likelihood for both models.}
         \label{fig:Q3b_2}
 \end{figure}
 
@@ -1071,7 +1080,7 @@ Laplacian & 4.994549 & 1.376650 & 2012.7520 \\ \bottomrule
          \includegraphics[width=\textwidth]{Q3c_fig5.png}
          \caption{Sample negative log-likelihood.}
      \end{subfigure}
-        \caption{The optimal Gaussian and Laplacian models fitted to the sampled data in Figure \ref{fig:Q3c_1}. a) shows the the Gaussian model, b) shows the Laplacian model, and c) shows the sample negative log-likelihood for both models.}
+        \caption{The optimal Gaussian and Laplacian models fitted to the sampled data in Figure \ref{fig:Q3c_1}. a) shows the Gaussian model, b) shows the Laplacian model, and c) shows the sample negative log-likelihood for both models.}
         \label{fig:Q3c_2}
 \end{figure}
 
@@ -1408,7 +1417,7 @@ Then, to solve for the mass matrix $\mathbf{M}$, we simply take $C_{[d:2d, 2d:3d
 \end{bmatrix}. \\
 \end{equation}
 
-If we further decompose the left hand side of Equation \eqref{eq:forced_parameter_recovery} using the process described for in Section \label{section:unforced_parameter_recovery}, we can obtain specific solutions for $\mathbf{C}$ and $\mathbf{K}$. In Table \ref{tab:Q4b_table1}, the recovered parameters are shown and it is clear that we can recover the system parameters.
+If we further decompose the left hand side of Equation \eqref{eq:forced_parameter_recovery} using the process described for in Section \ref{section:unforced_parameter_recovery}, we can obtain specific solutions for $\mathbf{C}$ and $\mathbf{K}$. In Table \ref{tab:Q4b_table1}, the recovered parameters are shown and it is clear that we can recover the system parameters.
 \begin{table}[!htb]
 \centering
 \caption{The recovered system parameters for the forced system.}

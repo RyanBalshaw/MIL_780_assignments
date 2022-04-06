@@ -1,25 +1,27 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6.28) (preloaded format=pdflatex 2022.4.6)  6 APR 2022 08:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.6)  6 APR 2022 10:22
 entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **./main.tex
 (main.tex
-LaTeX2e <2021-06-01> patch level 1
-L3 programming layer <2021-06-18>
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24>
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/base\ar
 ticle.cls
-Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/base\si
 ze10.clo
-File: size10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count182
-\c@section=\count183
-\c@subsection=\count184
-\c@subsubsection=\count185
-\c@paragraph=\count186
-\c@subparagraph=\count187
-\c@figure=\count188
-\c@table=\count189
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
@@ -45,11 +47,11 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/generic/iftex
 \iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
+Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
-\Gm@cnth=\count190
-\Gm@cntv=\count191
-\c@Gm@tempcnt=\count192
+\Gm@cnth=\count193
+\Gm@cntv=\count194
+\c@Gm@tempcnt=\count195
 \Gm@bindingoffset=\dimen139
 \Gm@wd@mp=\dimen140
 \Gm@odd@mp=\dimen141
@@ -64,14 +66,14 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 y\geometry.cfg))
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/amsmath
 \amsmath.sty
-Package: amsmath 2021/04/20 v2.17j AMS math features
+Package: amsmath 2021/10/15 v2.17l AMS math features
 \@mathmargin=\skip49
 
 For additional information on amsmath, use the `?' option.
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/amsmath
 \amstext.sty
-Package: amstext 2000/06/29 v2.01 AMS text
+Package: amstext 2021/08/26 v2.01 AMS text
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/amsmath
 \amsgen.sty
@@ -86,15 +88,15 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 )
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/amsmath
 \amsopn.sty
-Package: amsopn 2016/03/08 v2.02 operator names
+Package: amsopn 2021/08/26 v2.02 operator names
 )
-\inf@bad=\count193
+\inf@bad=\count196
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count194
-\leftroot@=\count195
+\uproot@=\count197
+\leftroot@=\count198
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count196
-\DOTSCASE@=\count197
+\classnum@=\count199
+\DOTSCASE@=\count266
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -103,15 +105,15 @@ LaTeX Info: Redefining \cdots on input line 620.
 \big@size=\dimen149
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count198
-\c@MaxMatrixCols=\count199
+\macc@depth=\count267
+\c@MaxMatrixCols=\count268
 \dotsspace@=\muskip16
-\c@parentequation=\count266
-\dspbrk@lvl=\count267
+\c@parentequation=\count269
+\dspbrk@lvl=\count270
 \tag@help=\toks21
-\row@=\count268
-\column@=\count269
-\maxfields@=\count270
+\row@=\count271
+\column@=\count272
+\maxfields@=\count273
 \andhelp@=\toks22
 \eqnshift@=\dimen150
 \alignsep@=\dimen151
@@ -123,8 +125,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \multlinegap=\skip50
 \multlinetaggap=\skip51
 \mathdisplay@stack=\toks24
-LaTeX Info: Redefining \[ on input line 2923.
-LaTeX Info: Redefining \] on input line 2924.
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
 )
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/amsfont
 s\amsfonts.sty
@@ -152,7 +154,7 @@ LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
 )
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/hyperre
 f\hyperref.sty
-Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/generic/ltxcm
 ds\ltxcmds.sty
@@ -200,19 +202,14 @@ ns\kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen156
-\Hy@linkcounter=\count271
-\Hy@pagecounter=\count272
+\Hy@linkcounter=\count274
+\Hy@pagecounter=\count275
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/hyperre
 f\pd1enc.def
-File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-)
-(C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/hyperre
-f\hyperref-langpatches.def
-File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
-nguages
 )
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/generic/intca
 lc\intcalc.sty
@@ -222,29 +219,29 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 mds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count273
+\Hy@SavedSpaceFactor=\count276
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/hyperre
 f\puenc.def
-File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4192.
-Package hyperref Info: Link nesting OFF on input line 4197.
-Package hyperref Info: Hyper index ON on input line 4200.
-Package hyperref Info: Plain pages OFF on input line 4207.
-Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Hyper figures OFF on input line 4137.
+Package hyperref Info: Link nesting OFF on input line 4142.
+Package hyperref Info: Hyper index ON on input line 4145.
+Package hyperref Info: Plain pages OFF on input line 4152.
+Package hyperref Info: Backreferencing OFF on input line 4157.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count274
+Package hyperref Info: Bookmarks ON on input line 4390.
+\c@Hy@tempcnt=\count277
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/url\url
 .sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4804.
+LaTeX Info: Redefining \url on input line 4749.
 \XeTeXLinkMargin=\dimen157
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/generic/bitse
@@ -256,42 +253,42 @@ tcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count275
+\Fld@menulength=\count278
 \Field@Width=\dimen158
 \Fld@charsize=\dimen159
-Package hyperref Info: Hyper figures OFF on input line 6076.
-Package hyperref Info: Link nesting OFF on input line 6081.
-Package hyperref Info: Hyper index ON on input line 6084.
-Package hyperref Info: backreferencing OFF on input line 6091.
-Package hyperref Info: Link coloring OFF on input line 6096.
-Package hyperref Info: Link coloring with OCG OFF on input line 6101.
-Package hyperref Info: PDF/A mode OFF on input line 6106.
-LaTeX Info: Redefining \ref on input line 6146.
-LaTeX Info: Redefining \pageref on input line 6150.
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring OFF on input line 6047.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+LaTeX Info: Redefining \ref on input line 6097.
+LaTeX Info: Redefining \pageref on input line 6101.
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/base\at
 begshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count276
-\c@Item=\count277
-\c@Hfootnote=\count278
+\Hy@abspage=\count279
+\c@Item=\count280
+\c@Hfootnote=\count281
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/hyperre
 f\hpdftex.def
-File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
+File: hpdftex.def 2022-02-21 v7.00n Hyperref driver for pdfTeX
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/base\at
 veryend-ltx.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
-e
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
 with kernel methods
 )
-\Fld@listcount=\count279
-\c@bookmark@seq@number=\count280
+\Fld@listcount=\count282
+\c@bookmark@seq@number=\count283
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/rerunfi
 lecheck\rerunfilecheck.sty
@@ -319,25 +316,25 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen167
 \cmidrulekern=\dimen168
 \defaultaddspace=\dimen169
-\@cmidla=\count281
-\@cmidlb=\count282
+\@cmidla=\count284
+\@cmidlb=\count285
 \@aboverulesep=\dimen170
 \@belowrulesep=\dimen171
-\@thisruleclass=\count283
-\@lastruleclass=\count284
+\@thisruleclass=\count286
+\@lastruleclass=\count287
 \@thisrulewidth=\dimen172
 )
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/multiro
 w\multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip53
-\multirow@cntb=\count285
+\multirow@cntb=\count288
 \multirow@dima=\skip54
 \bigstrutjot=\dimen173
 )
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/graphic
 s\graphicx.sty
-Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/graphic
 s\graphics.sty
@@ -345,7 +342,7 @@ Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/graphic
 s\trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/graphic
 s-cfg\graphics.cfg
@@ -362,43 +359,63 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 )
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/caption
 \caption.sty
-Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/caption
 \caption3.sty
-Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen176
-\captionmargin@=\dimen177
-\captionwidth=\dimen178
-\caption@tempdima=\dimen179
-\caption@indent=\dimen180
-\caption@parindent=\dimen181
-\caption@hangindent=\dimen182
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen176
+\captionmargin=\dimen177
+\caption@leftmargin=\dimen178
+\caption@rightmargin=\dimen179
+\caption@width=\dimen180
+\caption@indent=\dimen181
+\caption@parindent=\dimen182
+\caption@hangindent=\dimen183
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count286
-\c@continuedfloat=\count287
+\c@caption@flags=\count289
+\c@continuedfloat=\count290
 Package caption Info: hyperref package is loaded.
 )
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/caption
 \subcaption.sty
-Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
-\c@subfigure=\count288
-\c@subtable=\count289
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+\c@subfigure=\count291
+\c@subtable=\count292
+)
+(C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\
+xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+
+(C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/graphic
+s-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
 )
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/biblate
 x\biblatex.sty
-Package: biblatex 2020/12/31 v3.16 programmable bibliographies (PK/MW)
+Package: biblatex 2022/02/02 v3.17 programmable bibliographies (PK/MW)
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/etoolbo
 x\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count290
+\etb@tempcnta=\count293
 )
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/logreq\
 logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count291
+\lrq@indent=\count294
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/logreq\
 logreq.def
@@ -408,48 +425,48 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 then.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@tabx@nest=\count292
-\c@listtotal=\count293
-\c@listcount=\count294
-\c@liststart=\count295
-\c@liststop=\count296
-\c@citecount=\count297
-\c@citetotal=\count298
-\c@multicitecount=\count299
-\c@multicitetotal=\count300
-\c@instcount=\count301
-\c@maxnames=\count302
-\c@minnames=\count303
-\c@maxitems=\count304
-\c@minitems=\count305
-\c@citecounter=\count306
-\c@maxcitecounter=\count307
-\c@savedcitecounter=\count308
-\c@uniquelist=\count309
-\c@uniquename=\count310
-\c@refsection=\count311
-\c@refsegment=\count312
-\c@maxextratitle=\count313
-\c@maxextratitleyear=\count314
-\c@maxextraname=\count315
-\c@maxextradate=\count316
-\c@maxextraalpha=\count317
-\c@abbrvpenalty=\count318
-\c@highnamepenalty=\count319
-\c@lownamepenalty=\count320
-\c@maxparens=\count321
-\c@parenlevel=\count322
-\blx@tempcnta=\count323
-\blx@tempcntb=\count324
-\blx@tempcntc=\count325
-\blx@maxsection=\count326
-\blx@maxsegment@0=\count327
-\blx@notetype=\count328
-\blx@parenlevel@text=\count329
-\blx@parenlevel@foot=\count330
-\blx@sectionciteorder@0=\count331
-\blx@entrysetcounter=\count332
-\blx@biblioinstance=\count333
+\c@tabx@nest=\count295
+\c@listtotal=\count296
+\c@listcount=\count297
+\c@liststart=\count298
+\c@liststop=\count299
+\c@citecount=\count300
+\c@citetotal=\count301
+\c@multicitecount=\count302
+\c@multicitetotal=\count303
+\c@instcount=\count304
+\c@maxnames=\count305
+\c@minnames=\count306
+\c@maxitems=\count307
+\c@minitems=\count308
+\c@citecounter=\count309
+\c@maxcitecounter=\count310
+\c@savedcitecounter=\count311
+\c@uniquelist=\count312
+\c@uniquename=\count313
+\c@refsection=\count314
+\c@refsegment=\count315
+\c@maxextratitle=\count316
+\c@maxextratitleyear=\count317
+\c@maxextraname=\count318
+\c@maxextradate=\count319
+\c@maxextraalpha=\count320
+\c@abbrvpenalty=\count321
+\c@highnamepenalty=\count322
+\c@lownamepenalty=\count323
+\c@maxparens=\count324
+\c@parenlevel=\count325
+\blx@tempcnta=\count326
+\blx@tempcntb=\count327
+\blx@tempcntc=\count328
+\c@blx@maxsection=\count329
+\c@blx@maxsegment@0=\count330
+\blx@notetype=\count331
+\blx@parenlevel@text=\count332
+\blx@parenlevel@foot=\count333
+\c@blx@sectionciteorder@0=\count334
+\blx@entrysetcounter=\count335
+\blx@biblioinstance=\count336
 \labelnumberwidth=\skip55
 \labelalphawidth=\skip56
 \biblabelsep=\skip57
@@ -461,88 +478,88 @@ Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 \blx@bcfin=\read2
 \blx@bcfout=\write3
 \blx@langwohyphens=\language79
-\c@mincomprange=\count334
-\c@maxcomprange=\count335
-\c@mincompwidth=\count336
+\c@mincomprange=\count337
+\c@maxcomprange=\count338
+\c@mincompwidth=\count339
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/biblate
 x\blx-dm.def
-File: blx-dm.def 2020/12/31 v3.16 biblatex localization (PK/MW)
+File: blx-dm.def 2022/02/02 v3.17 biblatex localization (PK/MW)
 )
-Package biblatex Info: Trying to load biblatex citestyle data model...
-Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'ieee.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count337
-\c@savedafterword=\count338
-\c@annotator=\count339
-\c@savedannotator=\count340
-\c@author=\count341
-\c@savedauthor=\count342
-\c@bookauthor=\count343
-\c@savedbookauthor=\count344
-\c@commentator=\count345
-\c@savedcommentator=\count346
-\c@editor=\count347
-\c@savededitor=\count348
-\c@editora=\count349
-\c@savededitora=\count350
-\c@editorb=\count351
-\c@savededitorb=\count352
-\c@editorc=\count353
-\c@savededitorc=\count354
-\c@foreword=\count355
-\c@savedforeword=\count356
-\c@holder=\count357
-\c@savedholder=\count358
-\c@introduction=\count359
-\c@savedintroduction=\count360
-\c@namea=\count361
-\c@savednamea=\count362
-\c@nameb=\count363
-\c@savednameb=\count364
-\c@namec=\count365
-\c@savednamec=\count366
-\c@translator=\count367
-\c@savedtranslator=\count368
-\c@shortauthor=\count369
-\c@savedshortauthor=\count370
-\c@shorteditor=\count371
-\c@savedshorteditor=\count372
-\c@labelname=\count373
-\c@savedlabelname=\count374
-\c@institution=\count375
-\c@savedinstitution=\count376
-\c@lista=\count377
-\c@savedlista=\count378
-\c@listb=\count379
-\c@savedlistb=\count380
-\c@listc=\count381
-\c@savedlistc=\count382
-\c@listd=\count383
-\c@savedlistd=\count384
-\c@liste=\count385
-\c@savedliste=\count386
-\c@listf=\count387
-\c@savedlistf=\count388
-\c@location=\count389
-\c@savedlocation=\count390
-\c@organization=\count391
-\c@savedorganization=\count392
-\c@origlocation=\count393
-\c@savedoriglocation=\count394
-\c@origpublisher=\count395
-\c@savedorigpublisher=\count396
-\c@publisher=\count397
-\c@savedpublisher=\count398
-\c@language=\count399
-\c@savedlanguage=\count400
-\c@origlanguage=\count401
-\c@savedoriglanguage=\count402
-\c@pageref=\count403
-\c@savedpageref=\count404
+\c@afterword=\count340
+\c@savedafterword=\count341
+\c@annotator=\count342
+\c@savedannotator=\count343
+\c@author=\count344
+\c@savedauthor=\count345
+\c@bookauthor=\count346
+\c@savedbookauthor=\count347
+\c@commentator=\count348
+\c@savedcommentator=\count349
+\c@editor=\count350
+\c@savededitor=\count351
+\c@editora=\count352
+\c@savededitora=\count353
+\c@editorb=\count354
+\c@savededitorb=\count355
+\c@editorc=\count356
+\c@savededitorc=\count357
+\c@foreword=\count358
+\c@savedforeword=\count359
+\c@holder=\count360
+\c@savedholder=\count361
+\c@introduction=\count362
+\c@savedintroduction=\count363
+\c@namea=\count364
+\c@savednamea=\count365
+\c@nameb=\count366
+\c@savednameb=\count367
+\c@namec=\count368
+\c@savednamec=\count369
+\c@translator=\count370
+\c@savedtranslator=\count371
+\c@shortauthor=\count372
+\c@savedshortauthor=\count373
+\c@shorteditor=\count374
+\c@savedshorteditor=\count375
+\c@labelname=\count376
+\c@savedlabelname=\count377
+\c@institution=\count378
+\c@savedinstitution=\count379
+\c@lista=\count380
+\c@savedlista=\count381
+\c@listb=\count382
+\c@savedlistb=\count383
+\c@listc=\count384
+\c@savedlistc=\count385
+\c@listd=\count386
+\c@savedlistd=\count387
+\c@liste=\count388
+\c@savedliste=\count389
+\c@listf=\count390
+\c@savedlistf=\count391
+\c@location=\count392
+\c@savedlocation=\count393
+\c@organization=\count394
+\c@savedorganization=\count395
+\c@origlocation=\count396
+\c@savedoriglocation=\count397
+\c@origpublisher=\count398
+\c@savedorigpublisher=\count399
+\c@publisher=\count400
+\c@savedpublisher=\count401
+\c@language=\count402
+\c@savedlanguage=\count403
+\c@origlanguage=\count404
+\c@savedoriglanguage=\count405
+\c@pageref=\count406
+\c@savedpageref=\count407
 \shorthandwidth=\skip63
 \shortjournalwidth=\skip64
 \shortserieswidth=\skip65
@@ -562,49 +579,71 @@ Package biblatex Info: ... file 'blx-compat.def' found.
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/biblate
 x\blx-compat.def
-File: blx-compat.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
+File: blx-compat.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/biblate
 x\biblatex.def
-File: biblatex.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
-\c@textcitecount=\count405
-\c@textcitetotal=\count406
-\c@textcitemaxnames=\count407
-\c@biburlbigbreakpenalty=\count408
-\c@biburlbreakpenalty=\count409
-\c@biburlnumpenalty=\count410
-\c@biburlucpenalty=\count411
-\c@biburllcpenalty=\count412
+File: biblatex.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
+\c@textcitecount=\count408
+\c@textcitetotal=\count409
+\c@textcitemaxnames=\count410
+\c@biburlbigbreakpenalty=\count411
+\c@biburlbreakpenalty=\count412
+\c@biburlnumpenalty=\count413
+\c@biburlucpenalty=\count414
+\c@biburllcpenalty=\count415
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count413
+\c@smartand=\count416
 )
+Package biblatex Info: Trying to load bibliography style 'ieee'...
+Package biblatex Info: ... file 'ieee.bbx' found.
+
+(C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/biblate
+x-ieee\ieee.bbx
+File: ieee.bbx 2021/12/06 v1.3f biblatex bibliography style
+Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.bbx' found.
+
+(C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/biblate
+x/bbx\numeric-comp.bbx
+File: numeric-comp.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/biblate
 x/bbx\numeric.bbx
-File: numeric.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
+File: numeric.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/biblate
 x/bbx\standard.bbx
-File: standard.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count414
-\c@bbx:relatedtotal=\count415
-))
-Package biblatex Info: Trying to load citation style 'numeric'...
-Package biblatex Info: ... file 'numeric.cbx' found.
+File: standard.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count417
+\c@bbx:relatedtotal=\count418
+))))
+Package biblatex Info: Trying to load citation style 'ieee'...
+Package biblatex Info: ... file 'ieee.cbx' found.
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/biblate
-x/cbx\numeric.cbx
-File: numeric.cbx 2020/12/31 v3.16 biblatex citation style (PK/MW)
+x-ieee\ieee.cbx
+File: ieee.cbx 2021/12/06 v1.3f biblatex citation style
+Package biblatex Info: Trying to load citation style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.cbx' found.
+
+(C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/biblate
+x/cbx\numeric-comp.cbx
+File: numeric-comp.cbx 2022/02/02 v3.17 biblatex citation style (PK/MW)
+\c@cbx@tempcnta=\count419
+\c@cbx@tempcntb=\count420
+\c@cbx@tempcntc=\count421
+\c@cbx@tempcntd=\count422
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -617,50 +656,66 @@ Package biblatex Info: Redefining '\cites'.
 Package biblatex Info: Redefining '\parencites'.
 Package biblatex Info: Redefining '\smartcites'.
 )
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\cites'.
+)
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/biblate
 x\biblatex.cfg
 File: biblatex.cfg 
-))
-\@quotelevel=\count416
-\@quotereset=\count417
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+
+(C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/l3kerne
+l\expl3.sty
+Package: expl3 2022-02-24 L3 programming layer (loader) 
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/l3backe
 nd\l3backend-pdftex.def
-File: l3backend-pdftex.def 2021-05-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count418
+File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count423
 \l__pdf_internal_box=\box52
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2022-02-24 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/biblate
+x\blx-case-expl3.sty
+(C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/l3packa
+ges/xparse\xparse.sty
+Package: xparse 2022-01-12 L3 Experimental document command parser
 )
-(G:\My Drive\Github\MIL_780_assignments\Assignment 1\Write up\build\main.aux
-
-LaTeX Warning: Label `fig:Q1a_6' multiply defined.
-
-
-LaTeX Warning: Label `section:unforced_parameter_recovery' multiply defined.
-
-)
+Package: blx-case-expl3 2022/02/02 v3.17 expl3 case changing code for biblatex
+))
+\@quotelevel=\count424
+\@quotereset=\count425
+ (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -696,7 +751,7 @@ LaTeX Font Info:    ... okay on input line 35.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 35.
+Package hyperref Info: Link coloring OFF on input line 42.
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/hyperre
 f\nameref.sty
@@ -710,14 +765,12 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 tlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count419
+\c@section@level=\count426
 )
-LaTeX Info: Redefining \ref on input line 35.
-LaTeX Info: Redefining \pageref on input line 35.
-LaTeX Info: Redefining \nameref on input line 35.
-
-(G:\My Drive\Github\MIL_780_assignments\Assignment 1\Write up\build\main.out)
-(G:\My Drive\Github\MIL_780_assignments\Assignment 1\Write up\build\main.out)
+LaTeX Info: Redefining \ref on input line 42.
+LaTeX Info: Redefining \pageref on input line 42.
+LaTeX Info: Redefining \nameref on input line 42.
+ (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
@@ -725,16 +778,16 @@ LaTeX Info: Redefining \nameref on input line 35.
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/context/base/
 mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count420
-\scratchdimen=\dimen183
+\scratchcounter=\count427
+\scratchdimen=\dimen184
 \scratchbox=\box53
-\nofMPsegments=\count421
-\nofMParguments=\count422
+\nofMPsegments=\count428
+\nofMParguments=\count429
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count423
-\MPscratchDim=\dimen184
-\MPnumerator=\count424
-\makeMPintoPDFobject=\count425
+\MPscratchCnt=\count430
+\MPscratchDim=\dimen185
+\MPnumerator=\count431
+\makeMPintoPDFobject=\count432
 \everyMPtoPDFconversion=\toks26
 )
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/epstopd
@@ -754,453 +807,406 @@ Package biblatex Info: ... file 'english.lbx' found.
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/biblate
 x/lbx\english.lbx
-File: english.lbx 2020/12/31 v3.16 biblatex localization (PK/MW)
+File: english.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-Package biblatex Info: Document encoding is UTF8 ....
-
-(C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/l3kerne
-l\expl3.sty
-Package: expl3 2021-06-18 L3 programming layer (loader) 
-)
-Package biblatex Info: ... and expl3
-(biblatex)             2021-06-18 L3 programming layer (loader) 
-(biblatex)             is new enough (at least 2020/04/06),
-(biblatex)             setting 'casechanger=expl3'.
-
-(C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/biblate
-x\blx-case-expl3.sty
-(C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/l3packa
-ges/xparse\xparse.sty
-Package: xparse 2021-06-18 L3 Experimental document command parser
-)
-Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
-)
 \openout3 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' not found.
-
-No file main.bbl.
-Package biblatex Info: Reference section=0 on input line 35.
-Package biblatex Info: Reference segment=0 on input line 35.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
+Package biblatex Info: ... file 'main.bbl' found.
+ (main.bbl)
+Package biblatex Info: Reference section=0 on input line 42.
+Package biblatex Info: Reference segment=0 on input line 42.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
 
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/amsfont
 s\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
 
 
 (C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\Programs\MiKTeX\tex/latex/amsfont
 s\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<images//Q1a_fig1.png, id=159, 433.62pt x 289.08pt>
+<images//Q1a_fig1.png, id=160, 433.62pt x 289.08pt>
 File: images//Q1a_fig1.png Graphic file (type png)
 <use images//Q1a_fig1.png>
-Package pdftex.def Info: images//Q1a_fig1.png  used on input line 55.
+Package pdftex.def Info: images//Q1a_fig1.png  used on input line 65.
 (pdftex.def)             Requested size: 149.6003pt x 99.7327pt.
-<images//Q1a_fig2.png, id=161, 433.62pt x 289.08pt>
+<images//Q1a_fig2.png, id=162, 433.62pt x 289.08pt>
 File: images//Q1a_fig2.png Graphic file (type png)
 <use images//Q1a_fig2.png>
-Package pdftex.def Info: images//Q1a_fig2.png  used on input line 61.
+Package pdftex.def Info: images//Q1a_fig2.png  used on input line 71.
 (pdftex.def)             Requested size: 149.6003pt x 99.7327pt.
-<images//Q1a_fig3.png, id=162, 433.62pt x 289.08pt>
+<images//Q1a_fig3.png, id=163, 433.62pt x 289.08pt>
 File: images//Q1a_fig3.png Graphic file (type png)
 <use images//Q1a_fig3.png>
-Package pdftex.def Info: images//Q1a_fig3.png  used on input line 67.
+Package pdftex.def Info: images//Q1a_fig3.png  used on input line 77.
 (pdftex.def)             Requested size: 149.6003pt x 99.7327pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 74.
+(hyperref)                removing `math shift' on input line 84.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 74.
+(hyperref)                removing `math shift' on input line 84.
 
-<images//Q1a_fig4.png, id=164, 433.62pt x 289.08pt>
+<images//Q1a_fig4.png, id=165, 433.62pt x 289.08pt>
 File: images//Q1a_fig4.png Graphic file (type png)
 <use images//Q1a_fig4.png>
-Package pdftex.def Info: images//Q1a_fig4.png  used on input line 83.
+Package pdftex.def Info: images//Q1a_fig4.png  used on input line 93.
 (pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
 [1
 
-{C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Local/MiKTeX/pdftex/config/pdftex.map} 
-<./images//Q1a_fig1.png> <./images//Q1a_fig2.png> <./images//Q1a_fig3.png>]
+{C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.ma
+p} <./images//Q1a_fig1.png> <./images//Q1a_fig2.png> <./images//Q1a_fig3.png>] 
 [2 <./images//Q1a_fig4.png>]
-<images//Q1a_fig5.png, id=208, 867.24pt x 433.62pt>
+<images//Q1a_fig5.png, id=210, 867.24pt x 433.62pt>
 File: images//Q1a_fig5.png Graphic file (type png)
 <use images//Q1a_fig5.png>
-Package pdftex.def Info: images//Q1a_fig5.png  used on input line 141.
+Package pdftex.def Info: images//Q1a_fig5.png  used on input line 151.
 (pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
-<images//Q1a_fig6.png, id=213, 433.62pt x 289.08pt>
+<images//Q1a_fig6.png, id=215, 433.62pt x 289.08pt>
 File: images//Q1a_fig6.png Graphic file (type png)
 <use images//Q1a_fig6.png>
-Package pdftex.def Info: images//Q1a_fig6.png  used on input line 164.
+Package pdftex.def Info: images//Q1a_fig6.png  used on input line 174.
 (pdftex.def)             Requested size: 224.39664pt x 149.59904pt.
-<images//Q1a_fig7.png, id=214, 433.62pt x 289.08pt>
+<images//Q1a_fig7.png, id=216, 433.62pt x 289.08pt>
 File: images//Q1a_fig7.png Graphic file (type png)
 <use images//Q1a_fig7.png>
-Package pdftex.def Info: images//Q1a_fig7.png  used on input line 170.
+Package pdftex.def Info: images//Q1a_fig7.png  used on input line 180.
 (pdftex.def)             Requested size: 224.39664pt x 149.59904pt.
-<images//Q1a_fig8.png, id=220, 433.62pt x 289.08pt>
+<images//Q1a_fig8.png, id=222, 433.62pt x 289.08pt>
 File: images//Q1a_fig8.png Graphic file (type png)
 <use images//Q1a_fig8.png>
-Package pdftex.def Info: images//Q1a_fig8.png  used on input line 193.
+Package pdftex.def Info: images//Q1a_fig8.png  used on input line 203.
 (pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
  [3 <./images//Q1a_fig5.png>]
-<images//Q1a_fig9.png, id=234, 402.50375pt x 266.9975pt>
+<images//Q1a_fig9.png, id=236, 402.50375pt x 266.9975pt>
 File: images//Q1a_fig9.png Graphic file (type png)
 <use images//Q1a_fig9.png>
-Package pdftex.def Info: images//Q1a_fig9.png  used on input line 202.
+Package pdftex.def Info: images//Q1a_fig9.png  used on input line 212.
 (pdftex.def)             Requested size: 224.39664pt x 148.84943pt.
-<images//Q1a_fig10.png, id=235, 433.62pt x 289.08pt>
+<images//Q1a_fig10.png, id=237, 433.62pt x 289.08pt>
 File: images//Q1a_fig10.png Graphic file (type png)
 <use images//Q1a_fig10.png>
-Package pdftex.def Info: images//Q1a_fig10.png  used on input line 208.
+Package pdftex.def Info: images//Q1a_fig10.png  used on input line 218.
 (pdftex.def)             Requested size: 224.39664pt x 149.59904pt.
  [4 <./images//Q1a_fig6.png> <./images//Q1a_fig7.png> <./images//Q1a_fig8.png>]
-<images//Q1a_fig11.png, id=249, 433.62pt x 289.08pt>
+<images//Q1a_fig11.png, id=252, 433.62pt x 289.08pt>
 File: images//Q1a_fig11.png Graphic file (type png)
 <use images//Q1a_fig11.png>
-Package pdftex.def Info: images//Q1a_fig11.png  used on input line 237.
+Package pdftex.def Info: images//Q1a_fig11.png  used on input line 247.
 (pdftex.def)             Requested size: 224.39664pt x 149.59904pt.
-<images//Q1a_fig12.png, id=250, 433.62pt x 289.08pt>
+<images//Q1a_fig12.png, id=253, 433.62pt x 289.08pt>
 File: images//Q1a_fig12.png Graphic file (type png)
 <use images//Q1a_fig12.png>
-Package pdftex.def Info: images//Q1a_fig12.png  used on input line 243.
+Package pdftex.def Info: images//Q1a_fig12.png  used on input line 253.
 (pdftex.def)             Requested size: 224.39664pt x 149.59904pt.
  [5 <./images//Q1a_fig9.png> <./images//Q1a_fig10.png> <./images//Q1a_fig11.png
 > <./images//Q1a_fig12.png>]
-<images//Q1b_fig1.png, id=266, 433.62pt x 289.08pt>
+<images//Q1b_fig1.png, id=268, 433.62pt x 289.08pt>
 File: images//Q1b_fig1.png Graphic file (type png)
 <use images//Q1b_fig1.png>
-Package pdftex.def Info: images//Q1b_fig1.png  used on input line 285.
+Package pdftex.def Info: images//Q1b_fig1.png  used on input line 295.
 (pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
  [6 <./images//Q1b_fig1.png>]
-<images//Q1b_fig2.png, id=282, 722.7pt x 722.7pt>
+<images//Q1b_fig2.png, id=284, 722.7pt x 722.7pt>
 File: images//Q1b_fig2.png Graphic file (type png)
 <use images//Q1b_fig2.png>
-Package pdftex.def Info: images//Q1b_fig2.png  used on input line 337.
+Package pdftex.def Info: images//Q1b_fig2.png  used on input line 347.
 (pdftex.def)             Requested size: 224.39664pt x 224.39859pt.
-<images//Q1b_fig3.png, id=283, 722.7pt x 722.7pt>
+<images//Q1b_fig3.png, id=285, 722.7pt x 722.7pt>
 File: images//Q1b_fig3.png Graphic file (type png)
 <use images//Q1b_fig3.png>
-Package pdftex.def Info: images//Q1b_fig3.png  used on input line 343.
+Package pdftex.def Info: images//Q1b_fig3.png  used on input line 353.
 (pdftex.def)             Requested size: 224.39664pt x 224.39859pt.
-<images//Q1b_fig4.png, id=286, 433.62pt x 289.08pt>
+<images//Q1b_fig4.png, id=288, 433.62pt x 289.08pt>
 File: images//Q1b_fig4.png Graphic file (type png)
 <use images//Q1b_fig4.png>
-Package pdftex.def Info: images//Q1b_fig4.png  used on input line 367.
+Package pdftex.def Info: images//Q1b_fig4.png  used on input line 377.
 (pdftex.def)             Requested size: 260.17401pt x 173.44933pt.
  [7] [8 <./images//Q1b_fig2.png> <./images//Q1b_fig3.png> <./images//Q1b_fig4.p
 ng>]
-<images//Q1c_fig1.png, id=309, 433.62pt x 289.08pt>
+<images//Q1c_fig1.png, id=311, 433.62pt x 289.08pt>
 File: images//Q1c_fig1.png Graphic file (type png)
 <use images//Q1c_fig1.png>
-Package pdftex.def Info: images//Q1c_fig1.png  used on input line 387.
+Package pdftex.def Info: images//Q1c_fig1.png  used on input line 397.
 (pdftex.def)             Requested size: 260.17401pt x 173.44933pt.
-<images//Q1c_fig2.png, id=316, 433.62pt x 289.08pt>
+<images//Q1c_fig2.png, id=318, 433.62pt x 289.08pt>
 File: images//Q1c_fig2.png Graphic file (type png)
 <use images//Q1c_fig2.png>
-Package pdftex.def Info: images//Q1c_fig2.png  used on input line 415.
+Package pdftex.def Info: images//Q1c_fig2.png  used on input line 425.
 (pdftex.def)             Requested size: 224.39664pt x 149.59904pt.
-<images//Q1c_fig3.png, id=317, 433.62pt x 289.08pt>
+<images//Q1c_fig3.png, id=319, 433.62pt x 289.08pt>
 File: images//Q1c_fig3.png Graphic file (type png)
 <use images//Q1c_fig3.png>
-Package pdftex.def Info: images//Q1c_fig3.png  used on input line 421.
+Package pdftex.def Info: images//Q1c_fig3.png  used on input line 431.
 (pdftex.def)             Requested size: 224.39664pt x 149.59904pt.
  [9 <./images//Q1c_fig1.png>] [10 <./images//Q1c_fig2.png> <./images//Q1c_fig3.
 png>]
-<images//Q2a_fig1.png, id=343, 433.62pt x 289.08pt>
+<images//Q2a_fig1.png, id=345, 433.62pt x 289.08pt>
 File: images//Q2a_fig1.png Graphic file (type png)
 <use images//Q2a_fig1.png>
-Package pdftex.def Info: images//Q2a_fig1.png  used on input line 462.
+Package pdftex.def Info: images//Q2a_fig1.png  used on input line 472.
 (pdftex.def)             Requested size: 224.39664pt x 149.59904pt.
-<images//Q2a_fig2.png, id=344, 433.62pt x 289.08pt>
+<images//Q2a_fig2.png, id=346, 433.62pt x 289.08pt>
 File: images//Q2a_fig2.png Graphic file (type png)
 <use images//Q2a_fig2.png>
-Package pdftex.def Info: images//Q2a_fig2.png  used on input line 468.
+Package pdftex.def Info: images//Q2a_fig2.png  used on input line 478.
 (pdftex.def)             Requested size: 224.39664pt x 149.59904pt.
  [11
 
- <./images//Q2a_fig1.png> <./images//Q2a_fig2.png>]
-
-LaTeX Warning: Citation 'Petersen2006TheMC' on page 12 undefined on input line 
-525.
-
-[12]
-Overfull \hbox (0.44092pt too wide) in paragraph at lines 550--551
+ <./images//Q2a_fig1.png> <./images//Q2a_fig2.png>] [12]
+Overfull \hbox (0.44092pt too wide) in paragraph at lines 560--561
 []\OT1/cmr/m/n/10 In term two of the ob-jec-tive func-tion, we see that we have
  a sum-ma-tion over $\OML/cmm/m/it/10 N$ \OT1/cmr/m/n/10 of the outer prod-uct 
-$\OML/cmm/b/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/c
-mm/b/it/10 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )$.
+$\OML/cmm/b/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML
+/cmm/b/it/10 ^^^[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )$.
  []
 
-
-LaTeX Warning: Citation 'bishop2006' on page 13 undefined on input line 607.
-
 [13]
-<images//Q2a_fig3.png, id=387, 867.24pt x 867.24pt>
+<images//Q2a_fig3.png, id=393, 867.24pt x 867.24pt>
 File: images//Q2a_fig3.png Graphic file (type png)
 <use images//Q2a_fig3.png>
-Package pdftex.def Info: images//Q2a_fig3.png  used on input line 662.
+Package pdftex.def Info: images//Q2a_fig3.png  used on input line 672.
 (pdftex.def)             Requested size: 260.17401pt x 260.17401pt.
  [14] [15 <./images//Q2a_fig3.png>]
-<images//Q2a_fig4.png, id=415, 433.62pt x 289.08pt>
+<images//Q2a_fig4.png, id=421, 433.62pt x 289.08pt>
 File: images//Q2a_fig4.png Graphic file (type png)
 <use images//Q2a_fig4.png>
-Package pdftex.def Info: images//Q2a_fig4.png  used on input line 724.
+Package pdftex.def Info: images//Q2a_fig4.png  used on input line 734.
 (pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
-<images//Q2b_fig1.png, id=417, 433.62pt x 289.08pt>
+<images//Q2b_fig1.png, id=423, 433.62pt x 289.08pt>
 File: images//Q2b_fig1.png Graphic file (type png)
 <use images//Q2b_fig1.png>
-Package pdftex.def Info: images//Q2b_fig1.png  used on input line 737.
+Package pdftex.def Info: images//Q2b_fig1.png  used on input line 747.
 (pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
  [16 <./images//Q2a_fig4.png>]
-<images//Q2b_fig2.png, id=431, 867.24pt x 867.24pt>
+<images//Q2b_fig2.png, id=437, 867.24pt x 867.24pt>
 File: images//Q2b_fig2.png Graphic file (type png)
 <use images//Q2b_fig2.png>
-Package pdftex.def Info: images//Q2b_fig2.png  used on input line 771.
+Package pdftex.def Info: images//Q2b_fig2.png  used on input line 781.
 (pdftex.def)             Requested size: 224.39664pt x 224.39198pt.
-<images//Q2b_fig2_1.png, id=432, 867.24pt x 867.24pt>
+<images//Q2b_fig2_1.png, id=438, 867.24pt x 867.24pt>
 File: images//Q2b_fig2_1.png Graphic file (type png)
 <use images//Q2b_fig2_1.png>
-Package pdftex.def Info: images//Q2b_fig2_1.png  used on input line 777.
+Package pdftex.def Info: images//Q2b_fig2_1.png  used on input line 787.
 (pdftex.def)             Requested size: 224.39664pt x 224.39198pt.
-<images//Q2b_fig2_2.png, id=433, 867.24pt x 867.24pt>
+<images//Q2b_fig2_2.png, id=439, 867.24pt x 867.24pt>
 File: images//Q2b_fig2_2.png Graphic file (type png)
 <use images//Q2b_fig2_2.png>
-Package pdftex.def Info: images//Q2b_fig2_2.png  used on input line 783.
+Package pdftex.def Info: images//Q2b_fig2_2.png  used on input line 793.
 (pdftex.def)             Requested size: 224.39664pt x 224.39198pt.
-<images//Q2b_fig2_3.png, id=434, 867.24pt x 867.24pt>
+<images//Q2b_fig2_3.png, id=440, 867.24pt x 867.24pt>
 File: images//Q2b_fig2_3.png Graphic file (type png)
 <use images//Q2b_fig2_3.png>
-Package pdftex.def Info: images//Q2b_fig2_3.png  used on input line 789.
+Package pdftex.def Info: images//Q2b_fig2_3.png  used on input line 799.
 (pdftex.def)             Requested size: 224.39664pt x 224.39198pt.
  [17 <./images//Q2b_fig1.png>] [18 <./images//Q2b_fig2.png> <./images//Q2b_fig2
 _1.png> <./images//Q2b_fig2_2.png> <./images//Q2b_fig2_3.png>]
-<images//Q2b_fig3.png, id=468, 867.24pt x 867.24pt>
+<images//Q2b_fig3.png, id=474, 867.24pt x 867.24pt>
 File: images//Q2b_fig3.png Graphic file (type png)
 <use images//Q2b_fig3.png>
-Package pdftex.def Info: images//Q2b_fig3.png  used on input line 821.
+Package pdftex.def Info: images//Q2b_fig3.png  used on input line 831.
 (pdftex.def)             Requested size: 224.39664pt x 224.39198pt.
-<images//Q2b_fig4.png, id=469, 867.24pt x 867.24pt>
+<images//Q2b_fig4.png, id=475, 867.24pt x 867.24pt>
 File: images//Q2b_fig4.png Graphic file (type png)
 <use images//Q2b_fig4.png>
-Package pdftex.def Info: images//Q2b_fig4.png  used on input line 827.
+Package pdftex.def Info: images//Q2b_fig4.png  used on input line 837.
 (pdftex.def)             Requested size: 224.39664pt x 224.39198pt.
-<images//Q2b_fig5.png, id=470, 867.24pt x 867.24pt>
+<images//Q2b_fig5.png, id=476, 867.24pt x 867.24pt>
 File: images//Q2b_fig5.png Graphic file (type png)
 <use images//Q2b_fig5.png>
-Package pdftex.def Info: images//Q2b_fig5.png  used on input line 833.
+Package pdftex.def Info: images//Q2b_fig5.png  used on input line 843.
 (pdftex.def)             Requested size: 224.39664pt x 224.39198pt.
  [19] [20 <./images//Q2b_fig3.png> <./images//Q2b_fig4.png> <./images//Q2b_fig5
 .png>]
-<images//Q3a_fig1.png, id=485, 867.24pt x 867.24pt>
+<images//Q3a_fig1.png, id=491, 867.24pt x 867.24pt>
 File: images//Q3a_fig1.png Graphic file (type png)
 <use images//Q3a_fig1.png>
-Package pdftex.def Info: images//Q3a_fig1.png  used on input line 855.
+Package pdftex.def Info: images//Q3a_fig1.png  used on input line 865.
 (pdftex.def)             Requested size: 346.88986pt x 346.88986pt.
-<images//Q3b_fig1.png, id=487, 433.62pt x 289.08pt>
+<images//Q3b_fig1.png, id=493, 433.62pt x 289.08pt>
 File: images//Q3b_fig1.png Graphic file (type png)
 <use images//Q3b_fig1.png>
-Package pdftex.def Info: images//Q3b_fig1.png  used on input line 865.
+Package pdftex.def Info: images//Q3b_fig1.png  used on input line 875.
 (pdftex.def)             Requested size: 303.53192pt x 202.35461pt.
  [21
 
  <./images//Q3a_fig1.png>] [22 <./images//Q3b_fig1.png>]
-<images//Q3b_fig4.png, id=509, 433.62pt x 289.08pt>
+<images//Q3b_fig4.png, id=515, 433.62pt x 289.08pt>
 File: images//Q3b_fig4.png Graphic file (type png)
 <use images//Q3b_fig4.png>
-Package pdftex.def Info: images//Q3b_fig4.png  used on input line 931.
+Package pdftex.def Info: images//Q3b_fig4.png  used on input line 941.
 (pdftex.def)             Requested size: 224.39664pt x 149.59904pt.
-<images//Q3b_fig3.png, id=510, 433.62pt x 289.08pt>
+<images//Q3b_fig3.png, id=516, 433.62pt x 289.08pt>
 File: images//Q3b_fig3.png Graphic file (type png)
 <use images//Q3b_fig3.png>
-Package pdftex.def Info: images//Q3b_fig3.png  used on input line 937.
+Package pdftex.def Info: images//Q3b_fig3.png  used on input line 947.
 (pdftex.def)             Requested size: 224.39664pt x 149.59904pt.
  [23 <./images//Q3b_fig4.png> <./images//Q3b_fig3.png>]
-<images//Q3b_fig5.png, id=524, 867.24pt x 867.24pt>
+<images//Q3b_fig5.png, id=530, 867.24pt x 867.24pt>
 File: images//Q3b_fig5.png Graphic file (type png)
 <use images//Q3b_fig5.png>
-Package pdftex.def Info: images//Q3b_fig5.png  used on input line 1006.
+Package pdftex.def Info: images//Q3b_fig5.png  used on input line 1016.
 (pdftex.def)             Requested size: 244.3474pt x 244.34734pt.
-<images//Q3b_fig6.png, id=525, 867.24pt x 867.24pt>
+<images//Q3b_fig6.png, id=531, 867.24pt x 867.24pt>
 File: images//Q3b_fig6.png Graphic file (type png)
 <use images//Q3b_fig6.png>
-Package pdftex.def Info: images//Q3b_fig6.png  used on input line 1012.
+Package pdftex.def Info: images//Q3b_fig6.png  used on input line 1022.
 (pdftex.def)             Requested size: 244.3474pt x 244.34734pt.
-<images//Q3b_fig8.png, id=526, 1011.78pt x 433.62pt>
+<images//Q3b_fig8.png, id=532, 1011.78pt x 433.62pt>
 File: images//Q3b_fig8.png Graphic file (type png)
 <use images//Q3b_fig8.png>
-Package pdftex.def Info: images//Q3b_fig8.png  used on input line 1018.
+Package pdftex.def Info: images//Q3b_fig8.png  used on input line 1028.
 (pdftex.def)             Requested size: 398.93158pt x 170.97035pt.
  [24] [25 <./images//Q3b_fig5.png> <./images//Q3b_fig6.png> <./images//Q3b_fig8
 .png>]
-<images//Q3c_fig1.png, id=553, 433.62pt x 289.08pt>
+<images//Q3c_fig1.png, id=559, 433.62pt x 289.08pt>
 File: images//Q3c_fig1.png Graphic file (type png)
 <use images//Q3c_fig1.png>
-Package pdftex.def Info: images//Q3c_fig1.png  used on input line 1036.
+Package pdftex.def Info: images//Q3c_fig1.png  used on input line 1046.
 (pdftex.def)             Requested size: 346.89647pt x 231.2643pt.
-<images//Q3c_fig2.png, id=556, 867.24pt x 867.24pt>
+<images//Q3c_fig2.png, id=562, 867.24pt x 867.24pt>
 File: images//Q3c_fig2.png Graphic file (type png)
 <use images//Q3c_fig2.png>
-Package pdftex.def Info: images//Q3c_fig2.png  used on input line 1058.
+Package pdftex.def Info: images//Q3c_fig2.png  used on input line 1068.
 (pdftex.def)             Requested size: 244.3474pt x 244.34734pt.
-<images//Q3c_fig3.png, id=557, 867.24pt x 867.24pt>
+<images//Q3c_fig3.png, id=563, 867.24pt x 867.24pt>
 File: images//Q3c_fig3.png Graphic file (type png)
 <use images//Q3c_fig3.png>
-Package pdftex.def Info: images//Q3c_fig3.png  used on input line 1064.
+Package pdftex.def Info: images//Q3c_fig3.png  used on input line 1074.
 (pdftex.def)             Requested size: 244.3474pt x 244.34734pt.
-<images//Q3c_fig5.png, id=558, 867.24pt x 867.24pt>
+<images//Q3c_fig5.png, id=564, 867.24pt x 867.24pt>
 File: images//Q3c_fig5.png Graphic file (type png)
 <use images//Q3c_fig5.png>
-Package pdftex.def Info: images//Q3c_fig5.png  used on input line 1070.
+Package pdftex.def Info: images//Q3c_fig5.png  used on input line 1080.
 (pdftex.def)             Requested size: 299.20059pt x 299.19812pt.
-<images//Q3c_fig6.png, id=564, 867.24pt x 578.16pt>
+<images//Q3c_fig6.png, id=570, 867.24pt x 578.16pt>
 File: images//Q3c_fig6.png Graphic file (type png)
 <use images//Q3c_fig6.png>
-Package pdftex.def Info: images//Q3c_fig6.png  used on input line 1081.
+Package pdftex.def Info: images//Q3c_fig6.png  used on input line 1091.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
  [26 <./images//Q3c_fig1.png>] [27] [28 <./images//Q3c_fig2.png> <./images//Q3c
 _fig3.png> <./images//Q3c_fig5.png>] [29 <./images//Q3c_fig6.png>]
-
-LaTeX Warning: Citation 'Burden2016' on page 30 undefined on input line 1162.
-
-
-LaTeX Warning: Citation 'Burden2016' on page 30 undefined on input line 1166.
-
-<images//Q4a_fig1.png, id=593, 722.7pt x 433.62pt>
+<images//Q4a_fig1.png, id=601, 722.7pt x 433.62pt>
 File: images//Q4a_fig1.png Graphic file (type png)
 <use images//Q4a_fig1.png>
-Package pdftex.def Info: images//Q4a_fig1.png  used on input line 1175.
+Package pdftex.def Info: images//Q4a_fig1.png  used on input line 1185.
 (pdftex.def)             Requested size: 361.3491pt x 216.80946pt.
-[30
+ [30
 
 ]
-<images//Q4a_fig2.png, id=609, 722.7pt x 433.62pt>
+<images//Q4a_fig2.png, id=618, 722.7pt x 433.62pt>
 File: images//Q4a_fig2.png Graphic file (type png)
 <use images//Q4a_fig2.png>
-Package pdftex.def Info: images//Q4a_fig2.png  used on input line 1230.
+Package pdftex.def Info: images//Q4a_fig2.png  used on input line 1240.
 (pdftex.def)             Requested size: 244.3474pt x 146.6084pt.
-<images//Q4a_fig2_1.png, id=610, 722.7pt x 433.62pt>
+<images//Q4a_fig2_1.png, id=619, 722.7pt x 433.62pt>
 File: images//Q4a_fig2_1.png Graphic file (type png)
 <use images//Q4a_fig2_1.png>
-Package pdftex.def Info: images//Q4a_fig2_1.png  used on input line 1236.
+Package pdftex.def Info: images//Q4a_fig2_1.png  used on input line 1246.
 (pdftex.def)             Requested size: 244.3474pt x 146.6084pt.
  [31 <./images//Q4a_fig1.png>] [32 <./images//Q4a_fig2.png> <./images//Q4a_fig2
 _1.png>]
-<images//Q4b_fig1.png, id=635, 722.7pt x 433.62pt>
+<images//Q4b_fig1.png, id=644, 722.7pt x 433.62pt>
 File: images//Q4b_fig1.png Graphic file (type png)
 <use images//Q4b_fig1.png>
-Package pdftex.def Info: images//Q4b_fig1.png  used on input line 1293.
+Package pdftex.def Info: images//Q4b_fig1.png  used on input line 1303.
 (pdftex.def)             Requested size: 361.3491pt x 216.80946pt.
  [33 <./images//Q4b_fig1.png>]
-<images//Q4b_fig2.png, id=647, 722.7pt x 433.62pt>
+<images//Q4b_fig2.png, id=656, 722.7pt x 433.62pt>
 File: images//Q4b_fig2.png Graphic file (type png)
 <use images//Q4b_fig2.png>
-Package pdftex.def Info: images//Q4b_fig2.png  used on input line 1358.
+Package pdftex.def Info: images//Q4b_fig2.png  used on input line 1368.
 (pdftex.def)             Requested size: 244.3474pt x 146.6084pt.
-<images//Q4b_fig2_1.png, id=648, 722.7pt x 433.62pt>
+<images//Q4b_fig2_1.png, id=657, 722.7pt x 433.62pt>
 File: images//Q4b_fig2_1.png Graphic file (type png)
 <use images//Q4b_fig2_1.png>
-Package pdftex.def Info: images//Q4b_fig2_1.png  used on input line 1364.
+Package pdftex.def Info: images//Q4b_fig2_1.png  used on input line 1374.
 (pdftex.def)             Requested size: 244.3474pt x 146.6084pt.
  [34 <./images//Q4b_fig2.png> <./images//Q4b_fig2_1.png>]
-<images//Q4c_fig2.png, id=670, 722.7pt x 433.62pt>
+<images//Q4c_fig2.png, id=680, 722.7pt x 433.62pt>
 File: images//Q4c_fig2.png Graphic file (type png)
 <use images//Q4c_fig2.png>
-Package pdftex.def Info: images//Q4c_fig2.png  used on input line 1441.
+Package pdftex.def Info: images//Q4c_fig2.png  used on input line 1451.
 (pdftex.def)             Requested size: 244.3474pt x 146.6084pt.
-<images//Q4c_fig4.png, id=671, 722.7pt x 433.62pt>
+<images//Q4c_fig4.png, id=681, 722.7pt x 433.62pt>
 File: images//Q4c_fig4.png Graphic file (type png)
 <use images//Q4c_fig4.png>
-Package pdftex.def Info: images//Q4c_fig4.png  used on input line 1447.
+Package pdftex.def Info: images//Q4c_fig4.png  used on input line 1457.
 (pdftex.def)             Requested size: 244.3474pt x 146.6084pt.
-<images//Q4c_fig6.png, id=672, 722.7pt x 433.62pt>
+<images//Q4c_fig6.png, id=682, 722.7pt x 433.62pt>
 File: images//Q4c_fig6.png Graphic file (type png)
 <use images//Q4c_fig6.png>
-Package pdftex.def Info: images//Q4c_fig6.png  used on input line 1453.
+Package pdftex.def Info: images//Q4c_fig6.png  used on input line 1463.
 (pdftex.def)             Requested size: 244.3474pt x 146.6084pt.
-<images//Q4c_fig7.png, id=673, 1011.78pt x 433.62pt>
+<images//Q4c_fig7.png, id=683, 1011.78pt x 433.62pt>
 File: images//Q4c_fig7.png Graphic file (type png)
 <use images//Q4c_fig7.png>
-Package pdftex.def Info: images//Q4c_fig7.png  used on input line 1459.
+Package pdftex.def Info: images//Q4c_fig7.png  used on input line 1469.
 (pdftex.def)             Requested size: 244.3474pt x 104.71933pt.
  [35] [36 <./images//Q4c_fig2.png> <./images//Q4c_fig4.png> <./images//Q4c_fig6
-.png> <./images//Q4c_fig7.png>]
+.png> <./images//Q4c_fig7.png>] [37
 
-LaTeX Warning: Empty bibliography on input line 1472.
-
-(G:\My Drive\Github\MIL_780_assignments\Assignment 1\Write up\build\main.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
+] (main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: A72E522A95FE96A07EED0BBB48E464B5;7187.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19013 strings out of 478847
- 329248 string characters out of 2840803
- 1063885 words of memory out of 3000000
- 36454 multiletter control sequences out of 15000+600000
- 419519 words of font info for 86 fonts, out of 8000000 for 9000
+ 20335 strings out of 478582
+ 361665 string characters out of 2836793
+ 1073451 words of memory out of 3000000
+ 38001 multiletter control sequences out of 15000+600000
+ 485649 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,19n,66p,1204b,1130s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,19n,68p,1204b,1400s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\ryanb.LAPTOP-4EHB9TVB\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappe
 n/ec/dpi600\tcrm1000.pk><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Local/Programs/
 MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/ryanb.LAPTOP-4EHB9TV
 B/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/U
 sers/ryanb.LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmbx7.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/
-ryanb.LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmmi12.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/ryanb.
-LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-mi7.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmmi9.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/ryanb.LAPTO
-P-4EHB9TVB/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cm
-mib7.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmr10.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ryanb.LAPTOP
--4EHB9TVB/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pf
-b><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmr6.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/User
-s/ryanb.LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/rya
-nb.LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmtt10.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "G:\My Drive\Github\MIL_780_assignments\Assignment 1\Write up
-\build\main.pdf" (36 pages, 2390108 bytes).
+X/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users
+/ryanb.LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmmi10.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/ryan
+b.LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmmi6.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmmi7.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/ryanb.LAPTO
+P-4EHB9TVB/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10
+.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cmextra/cmmib7.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ryanb.LAPT
+OP-4EHB9TVB/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.
+pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr17.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/ryanb.LAPTOP-4EHB9
+TVB/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/U
+sers/ryanb.LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr9.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/ry
+anb.LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmti10.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/ryanb.LAPTOP-4EHB9TVB/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (37 pages, 2410933 bytes).
 PDF statistics:
- 838 PDF objects out of 1000 (max. 8388607)
- 220 named destinations out of 1000 (max. 500000)
+ 866 PDF objects out of 1000 (max. 8388607)
+ 226 named destinations out of 1000 (max. 500000)
  570 words of extra memory for PDF output out of 10000 (max. 10000000)
 
