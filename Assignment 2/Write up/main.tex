@@ -521,6 +521,188 @@ We can use the posterior distribution $p(\theta \vert \mathbf{x})$ and the poste
      \label{fig:Q1b_CDFs}
 \end{figure}
 
+\clearpage
+
+\section{Question 2}
+Consider the regression model
+\begin{equation}
+\begin{aligned}[b]
+y_n &= f(x_n) + \epsilon_n \\
+&= \omega_0 + \omega_1 \cdot x_n + \omega_2 \cdot x_n^2 + \cdots +  + \omega_K \cdot x_n^{K} + \epsilon_n \\
+&= \boldsymbol\omega^T \boldsymbol\phi(x_n) + \epsilon_n,
+\end{aligned}
+\end{equation}
+where $y_n$ denotes the regression model response, $x_n$ is the independent regression variable, $\boldsymbol\omega$ is the regression parameter vector, $\boldsymbol\phi(\cdot)$ is a basis column vector and $\epsilon_n$ is the sample noise
+\begin{equation}
+\epsilon_n \sim \mathcal{N}(0, \sigma^2),
+\end{equation}
+with $\sigma = 0.5$. As the noise is an additive Gaussian distribution, the generative model is
+\begin{equation}
+p(y\vert x, \boldsymbol\omega, \sigma^2) = \mathcal{N}(y \vert f(x), \sigma^2).
+\end{equation}
+
+In this problem, the goal is to perform Bayesian inference. The conjugate prior for this process is given by
+\begin{equation}
+p(\boldsymbol\omega) = \mathcal{N}(\boldsymbol\omega \vert \mathbf{0}, \frac{1}{\alpha} \mathbf{I}),
+\end{equation}
+where $\alpha$ is the prior precision. The observed regression data $\mathbf{y} = [y_1, y_2, \cdots, y_N]^T$ and corresponding independent variable $\mathbf{x} = [x_1, x_2, \cdots, x_N]^T$ is detailed in Figure \ref{fig:Q2_data}.
+\begin{figure}[htb!]
+\centering
+\includegraphics[scale=0.5]{Q2_1.pdf}
+\caption{The observed regression data for Question 2.}
+\label{fig:Q2_data}
+\end{figure}
+
+\subsection{Bayesian inference}
+
+In order to perform Bayesian inference, we assume that the samples in $\mathcal{D}$ satisfy the \emph{i.i.d} assumption. As such, we can calculate the conditional likelihood function $p(\mathbf{y} \vert \mathbf{x})$ as follows
+\begin{equation}
+p(\mathbf{y} \vert \mathbf{x}, \boldsymbol\omega, \sigma^2) = \prod_{n=1}^{N} p(y_n \vert x_n, \boldsymbol\omega, \sigma^2),
+\end{equation}
+However, to avoid numerical underflow issues, and to simplify derivative computations, the logarithm of the likelihood function is used, which gives
+\begin{equation}
+\begin{aligned}[b]
+\log p(\mathbf{y} \vert \mathbf{x}, \boldsymbol\omega, \sigma^2) &= \sum_{n=1}^{N} p(y_n \vert x_n) \\
+\mathcal{L}(\boldsymbol\omega) &= \sum_{n=1}^{N} \left( -\frac{1}{2}\log \left( 2\pi \right) -\frac{1}{2}\log \left( \sigma^2 \right) - \frac{1}{2\sigma^2} \left[ y_n - f(x_n)\right] ^2 \right), \\
+&=  -\frac{N}{2}\log \left( 2\pi \right) -\frac{N}{2}\log \left( \sigma^2 \right) - \frac{1}{2\sigma^2}\sum_{n=1}^{N} \left( \left[ y_n - f(x_n)\right] ^2 \right),
+\end{aligned}
+\end{equation}
+
+where $\mathcal{L}(\mathbf{w}, \sigma^2)$ is the log-likelihood function that we wish to maximise. To perform maximum likelihood estimation  we would maximise this function, we can use numerous methods (grid search, optimisation), but in this assignment we will make use of the analytical solution to the ML problem. The ML estimate for $\boldsymbol\omega$ is given as
+\begin{equation}
+\hat{\boldsymbol\omega} = \left( \boldsymbol\Phi^T \boldsymbol\Phi \right)^{-1} \boldsymbol\Phi^T \mathbf{t},
+\end{equation}
+where 
+\begin{equation}
+\boldsymbol\Phi = 
+\begin{bmatrix}
+\phi_1^{(0)} & \phi_1^{(1)} & \cdots & \phi_1^{(K)} \\
+\phi_2^{(0)} & \phi_2^{(1)} & \cdots & \phi_2^{(K)} \\
+\vdots & \vdots & \ddots & \vdots \\
+\phi_N^{(0)} & \phi_N^{(1)} & \cdots & \phi_N^{(K)} \\
+\end{bmatrix},
+\end{equation}
+such that the $n^{th}$ row of $\boldsymbol\Phi$ is equal to $\boldsymbol\phi(x_n)^T$ and $\boldsymbol\Phi \in \mathbb{R}^{N \times K + 1}$. Given the ML estimate for the regression parameters, the sampling distribution of the estimated parameters is given by
+\begin{equation}
+\hat{\boldsymbol\omega} \sim \mathcal{N}(\boldsymbol\omega_{ML}, \boldsymbol\Sigma_{ML}),
+\end{equation}
+where the covariance $\boldsymbol\Sigma_{ML}$ is given by
+\begin{equation}
+\boldsymbol\Sigma_{ML} = \sigma^2 \cdot \left(\boldsymbol\Phi^T \boldsymbol\Phi\right)^{-1}.
+\end{equation}
+However, in the Bayesian inference setting we are interesting in the posterior distribution $p(\boldsymbol\omega \vert \mathbf{y})$, which is given in [CITE] as
+\begin{equation}
+p(\boldsymbol\omega \vert \mathbf{y}) = \mathcal{N}\left(\boldsymbol\omega \vert \boldsymbol\mu_{\boldsymbol\omega}, \boldsymbol\Sigma_{\boldsymbol\omega}  \right),
+\end{equation}
+where the mean of the multivariate Gaussian posterior distribution is
+\begin{equation}
+\boldsymbol\mu_{\boldsymbol\omega} = \left( \boldsymbol\Phi^T \boldsymbol\Phi + \frac{\alpha}{\beta}\cdot \mathbf{I}  \right)^{-1} \boldsymbol\Phi^T \mathbf{y},
+\end{equation}
+and the covariance of the multivariate Gaussian posterior distribution is
+\begin{equation}
+\boldsymbol\Sigma_{\boldsymbol\omega} = \left( \beta \cdot \boldsymbol\Phi^T \boldsymbol\Phi + \alpha \cdot \mathbf{I}  \right)^{-1}.
+\end{equation}
+Note that the parameter $\beta$ is the inverse of the generative model variance
+\begin{equation}
+\beta = \frac{1}{\sigma^2}.
+\end{equation}
+
+Furthermore, the posterior predictive distribution is given as
+\begin{equation}\label{eq:Q2_post_predict}
+p(y \vert x, \mathbf{y}, \alpha, \beta) = \mathcal{N}(y \vert \boldsymbol\mu^{T}_{\boldsymbol\omega} \boldsymbol\phi(x), \sigma_p(x)^2),
+\end{equation}
+where the posterior predictive variance is given as
+\begin{equation}
+\sigma_p(x)^2 = \frac{1}{\beta} + \boldsymbol\phi(x)^T \boldsymbol\Sigma_{\boldsymbol\omega}\boldsymbol\phi(x).
+\end{equation}
+
+\subsubsection*{The posterior distribution}
+The posterior distribution over $\boldsymbol\omega$ is dependent on the polynomial order $K$. For an order of $K = 1$, the posterior mean (which is also the MAP estimate for $\boldsymbol\omega$) is given by
+\begin{equation}
+\boldsymbol\mu_{\boldsymbol\omega} = 
+\begin{bmatrix}
+5.6164 & 16.3821 & -119.3896 & 352.7705 & -397.5298 & 154.9652
+\end{bmatrix}^T.
+\end{equation}
+In comparison, the ML estimate for the optimal regression parameters is
+\begin{equation}
+\hat{\boldsymbol\omega} = 
+\begin{bmatrix}
+5.2873 & 30.3442 & -222.7383 & 630.0886 & -706.5113 & 276.5713
+\end{bmatrix}^T.
+\end{equation}
+The posterior covariance is given by
+\begin{equation}
+\boldsymbol\Sigma_{\boldsymbol\omega} = 
+\begin{bmatrix}
+ 0.192 & -2.666 & 11.817 & -22.766 &  19.903 & -6.479 \\
+-2.666 & 68.785 & -399.800 & 913.643 & -905.064 &  325.313  \\
+11.817 & -399.800 & 2642.418 & -6563.822 & 6906.319 & -2599.888 \\
+-22.766 & 913.643 & -6563.822 & 17239.678 & -18895.118 & 7340.081 \\
+19.903 & -905.064 & 6906.319 & -18895.118 & 21343.734 & -8487.156 \\
+-6.479 & 325.313 & -2599.888 & 7340.081 & -8487.156 & 3436.762
+\end{bmatrix}
+\end{equation}
+In comparison, the ML estimate for the sampling distribution covariance is
+\begin{equation}
+\boldsymbol\Sigma_{ML} = 
+\begin{bmatrix}
+0.212 & -3.478 & 17.796 & -38.751 & 37.667 & -13.457 \\
+-3.478 & 103.027 & -652.543 & 1590.580 & -1658.292 & 621.463 \\
+17.796 & -652.543 & 4510.225 & -11570.545 & 12480.551 & -4792.511 \\
+-38.751 & 1590.580 & -11570.545 & 30667.479 & -33850.660 & 13224.552 \\
+37.667 & -1658.292 & 12480.551 & -33850.660 & 38005.432 & -15044.317 \\
+-13.457 & 621.463 & -4792.511 & 13224.552 & -15044.317 &  6017.727 
+\end{bmatrix}
+\end{equation}
+
+\subsubsection{Sampling the prior and posterior}
+If we draw samples from the prior $p(\boldsymbol\omega)$ and the posterior $p(\boldsymbol\omega \vert \mathbf{y})$, we can visualise how different regression models fit the observed data before and after performing inference on the observed data. In Figure \ref{fig:Q2_sample_posterior}, the models with parameters from the prior and posterior distribution is shown.
+\begin{figure}[htb!]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Q2_2.pdf}
+         \caption{$\boldsymbol\omega \sim p(\boldsymbol\omega)$.}
+     \end{subfigure}
+     ~
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Q2_3.pdf}
+         \caption{$\boldsymbol\omega \sim p(\boldsymbol\omega \vert \mathbf{y})$.}
+     \end{subfigure}
+     
+     \caption{A visualisation of the samples from the prior and posterior distributions over $\boldsymbol\omega$.}
+     \label{fig:Q2_sample_posterior}
+\end{figure}
+
+\subsubsection{The posterior predictive distribution}
+The posterior distribution $p(\boldsymbol\omega \vert \mathbf{y})$ is only one half of the Bayesian inference process. We can use the posterior predictive distribution in Equation \eqref{eq:Q2_post_predict} to make predictions for new $x$ values. In Figure \ref{fig:Q2_post_predict} the posterior predictive distribution over the $x$ domain is shown.
+\begin{figure}[htb!]
+\centering
+\includegraphics[scale=0.5]{Q2_4.pdf}
+\caption{The posterior predictive distribution overlaid with the observed data.}
+\label{fig:Q2_post_predict}
+\end{figure}
+
+\subsubsection{Bayesian inference interpretation}
+Before we continue with the assignment, it is important that we reflect and comment on the distributions that we are using and the information they contain. The distributions discussed here are:
+\begin{itemize}
+\item The prior predictive distribution.
+\item Functions generated from sampling the posterior distribution.
+\item The posterior predictive distribution.
+\end{itemize}
+
+\textbf{The prior predictive distribution:} This distribution reflects our prior belief given to the generative model. The important aspect of this distribution is that it is a marginalisation over the model parameters for the product of the generative model and the prior distribution. As such, this distribution calculates the probability of a new data point $x$ given our prior uncertainty about the model parameters $\boldsymbol\omega$. The interpretation of this distribution is subjective, as it highly depends on our prior inference built into to the prior distribution. Hypothetically, if we expect that one regression parameter is not negative (such as the model offset $\omega_0$) then we could incorporate this prior knowledge into the prior distribution. This hypothetical process is subjective, as it depends on the user, and hence the prior predictive distribution will reflect this bias.
+
+\textbf{Functions generated from sampling the posterior distribution:} Simply put, these functions represent different generative models. However, the posterior distribution represents the uncertainty in the parameter space given some observed data. As such, these functions represent are a proxy to the fit of the generative model to the observed data, where this fit has some uncertainty or variation (which is conveyed in the posterior distribution). If the functions vary greatly from sample to sample, then this is an indication that there is a large amount of uncertainty in the posterior distribution or the parameter space.
+
+\textbf{The posterior predictive distribution:} The posterior predictive distribution is primarily used for predictive inference. This inference gives a distribution over an unobserved data point $x$, and it represents the process of integrating over an infinite number of models. Naturally, the posterior distribution conveys the uncertainty in the possible parameters for these different models, and hence gives an weighting to models that it believes are more likely given the observed data. This then allows the posterior predictive distribution to not only capture and express the uncertainty around a new data point, but it also serves as a proxy for us as to whether or not this new data is similar to the data that was previously observed.
+
+\subsubsection{The impact of the prior hyper-parameters}
+As before, the prior hyper-parameters influence the distributions obtained through the Bayesian inference process. The effects of $\alpha$ will be 
+
+\clearpage
 
 \iffalse
 
