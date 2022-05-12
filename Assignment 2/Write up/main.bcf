@@ -2348,6 +2348,15 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">Bibliography.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1">bishop2006</bcf:citekey>
+    <bcf:citekey order="2">bishop2006</bcf:citekey>
+    <bcf:citekey order="3">bishop2006</bcf:citekey>
+    <bcf:citekey order="4">bishop2006</bcf:citekey>
+    <bcf:citekey order="5">bishop2006</bcf:citekey>
+    <bcf:citekey order="6">bishop2006</bcf:citekey>
+    <bcf:citekey order="7">bishop2006</bcf:citekey>
+    <bcf:citekey order="8">bishop2006</bcf:citekey>
+    <bcf:citekey order="9">bishop2006</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
