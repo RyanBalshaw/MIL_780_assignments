@@ -297,7 +297,7 @@ The likelihood function is proportional to
 \begin{equation}\label{eq:Q1b_proportion}
 p(\mathbf{x} \vert \theta, \lambda) \propto \left[ \lambda^{\frac{1}{2}} \cdot \exp \left( -\frac{\lambda \cdot \theta^2}{2} \right)\right]^{N} \cdot \left[ \exp \left( - \frac{\lambda}{2} \cdot \sum_{n=1}^{N} x_n^2 + \lambda \cdot \theta \cdot \sum_{n=1}^{N}x_n \right) \right],
 \end{equation}
-where the normalisation constant $\left(\frac{1}{2 \cdot \pi}\right)^{\frac{N}{2}}$ has been removed. To design a conjugate prior to the assumed likelihood function, we need to construct a prior $p(\theta, \lambda)$ that creates a functionally similar posterior distribution. Before the proceed, we need to think about the domains of $\theta$ and $\sigma^2$. $\theta$ can be any value on the real domain $\mathbb{R}$, while the domain of $\sigma$ (and equivalently, $\lambda$) is bounded to $[0, \infty]$. Thus, the prior distribution should reflect this domain variation. Furthermore, based on the inspection of Equation \eqref{eq:Q1b_proportion}, the prior distribution can be expressed as $p(\theta \vert \lambda)p(\lambda)$. In \citeauthor*{bishop2006} \cite{bishop2006}, the prior of interest given as is the normal-Gamma distribution
+where the normalisation constant $\left(\frac{1}{2 \cdot \pi}\right)^{\frac{N}{2}}$ has been removed. To design a conjugate prior to the assumed likelihood function, we need to construct a prior $p(\theta, \lambda)$ that creates a functionally similar posterior distribution. Before the proceed, we need to think about the domains of $\theta$ and $\sigma^2$. $\theta$ can be any value on the real domain $\mathbb{R}$, while the domain of $\sigma$ (and equivalently, $\lambda$) is bounded to $[0, \infty]$. Thus, the prior distribution should reflect this domain variation. Furthermore, based on the inspection of Equation \eqref{eq:Q1b_proportion}, the prior distribution can be expressed as $p(\theta \vert \lambda)p(\lambda)$. In [CITE], the prior of interest given as is the normal-Gamma distribution
 \begin{equation}
 p(\theta , \lambda) = \mathcal{N}\left( \theta \vert \theta_0, (\beta_0 \cdot \lambda)^{-1} \right)\text{Gam}\left( \lambda \vert a_0, b_0 \right),
 \end{equation}
@@ -590,9 +590,9 @@ where the covariance $\boldsymbol\Sigma_{ML}$ is given by
 \begin{equation}
 \boldsymbol\Sigma_{ML} = \sigma^2 \cdot \left(\boldsymbol\Phi^T \boldsymbol\Phi\right)^{-1}.
 \end{equation}
-However, in the Bayesian inference setting we are interesting in the posterior distribution $p(\boldsymbol\omega \vert \mathbf{x}, \mathbf{y})$, which is given in \citeauthor*{bishop2006} \cite{bishop2006} as
+However, in the Bayesian inference setting we are interesting in the posterior distribution $p(\boldsymbol\omega \vert \mathbf{y})$, which is given in [CITE] as
 \begin{equation}
-p(\boldsymbol\omega \vert \mathbf{x}, \mathbf{y}) = \mathcal{N}\left(\boldsymbol\omega \vert \boldsymbol\mu_{\boldsymbol\omega}, \boldsymbol\Sigma_{\boldsymbol\omega}  \right),
+p(\boldsymbol\omega \vert \mathbf{y}) = \mathcal{N}\left(\boldsymbol\omega \vert \boldsymbol\mu_{\boldsymbol\omega}, \boldsymbol\Sigma_{\boldsymbol\omega}  \right),
 \end{equation}
 where the mean of the multivariate Gaussian posterior distribution is
 \begin{equation}
@@ -609,7 +609,7 @@ Note that the parameter $\beta$ is the inverse of the generative model variance
 
 Furthermore, the posterior predictive distribution is given as
 \begin{equation}\label{eq:Q2_post_predict}
-p(y \vert x, \mathbf{x}, \mathbf{y}, \alpha, \beta) = \mathcal{N}(y \vert \boldsymbol\mu^{T}_{\boldsymbol\omega} \boldsymbol\phi(x), \sigma_p(x)^2),
+p(y \vert x, \mathbf{y}, \alpha, \beta) = \mathcal{N}(y \vert \boldsymbol\mu^{T}_{\boldsymbol\omega} \boldsymbol\phi(x), \sigma_p(x)^2),
 \end{equation}
 where the posterior predictive variance is given as
 \begin{equation}
@@ -700,110 +700,7 @@ Before we continue with the assignment, it is important that we reflect and comm
 \textbf{The posterior predictive distribution:} The posterior predictive distribution is primarily used for predictive inference. This inference gives a distribution over an unobserved data point $x$, and it represents the process of integrating over an infinite number of models. Naturally, the posterior distribution conveys the uncertainty in the possible parameters for these different models, and hence gives an weighting to models that it believes are more likely given the observed data. This then allows the posterior predictive distribution to not only capture and express the uncertainty around a new data point, but it also serves as a proxy for us as to whether or not this new data is similar to the data that was previously observed.
 
 \subsubsection{The impact of the prior hyper-parameters}
-As before, the prior hyper-parameters influence the distributions obtained through the Bayesian inference process. The effects of $\alpha$ will be investigated. In this investigation, the model order will be linearly increased from 1 to 10. The objective is to investigate the effect of the model order on the ML estimate for $\boldsymbol\omega$, and the effect of the hyper-parameter $\alpha$ on the MAP estimate of $\boldsymbol\omega$ for different model orders. To quantify these effects, the mean-squared error (MSE) and the posterior-predictive log-likelihood will be inspected for different model orders and different values of $\alpha$. It is clear from Figure \ref{fig:Q2_hyper_parameters}a) that as the model order is increased, the generative model has more flexibility and thus appears more non-linear. In Figure \ref{fig:Q2_hyper_parameters}b) one can note that increasing $\alpha$ causes a gradual decrease in the posterior predictive log-likelihood. This gradual decrease, based on Figure \ref{fig:Q2_hyper_parameters}d), is attributed to the dominance of the prior in the Bayesian inference process. The prior enforces that the model parameters should be closer to zero, which acts as a form of regularisation on the model parameters. Hence, the expected values of the posterior predictive distribution for different model order become less non-linear as $\alpha$ increases. It is also clear to see that the posterior predictive log-likelihood steadies out after a model order of 2, which indicates that a second order polynomial fits that data well and additional model order do not have a significant impact. In Figure \ref{fig:Q2_hyper_parameters}c) an interesting response is observed, whereby as $\alpha$ is increased the MSE gets better up until $\alpha = 10$. From this point higher order models fit the data poorly in comparison to the lower-order variants.
-\begin{figure}
-\centering
-\begin{subfigure}[b]{.45\textwidth}
-\includegraphics[width=\textwidth]{Q2_5.pdf}
-\caption{ML estimates for $M = 1, \cdots, 10$.}
-
-\vspace{2ex}
-
-\includegraphics[width=\textwidth]{Q2_7.pdf}
-\caption{Posterior predictive log-likelihood.}
-
-\vspace{2ex}
-
-\includegraphics[width=\textwidth]{Q2_8.pdf}
-\caption{Mean squared error.}
-
-\end{subfigure}
-\qquad
-\begin{subfigure}[b]{.35\textwidth}
-\includegraphics[width=\textwidth]{Q2_6.pdf}
-\caption{Posterior predictive expected value visualisation.}
-\end{subfigure}
-
-\caption{The results of the $\alpha$ investigation. In a) the ML estimates for different model orders are shown, in b) the posterior-predictive log-likelihood for various $\alpha$ values and various model orders is shown, in c) the MSE for various $\alpha$ values and various model orders is shown, and in d) the expected values of the posterior predictive distribution are shown for the values of $\alpha$ considered in the investigation.}
-\label{fig:Q2_hyper_parameters}
-\end{figure}
-
-\subsubsection{Interpreting the Bayesian inference results}
-We can now use the prior distribution, posterior distribution, and posterior-predictive distribution to as questions regarding the model parameters and the predictive inference process. As the prior and posterior distributions are Gaussian, we can utilise the known properties of the Gaussian distribution to obtain the marginal distributions for the $\omega_1$ parameter. The details of this process are given in \citeauthor*{bishop2006} \cite{bishop2006}. As a result, the marginal distribution of interest for $P(\omega_1 > 8)$ is given by
-\begin{equation}
-p(\omega_1) = \mathcal{N}\left(\omega_1 \vert 0, \frac{1}{\alpha}\right).
-\end{equation}
-To calculate the probability $P(\omega_1 > 8 \vert \mathbf{x}, \mathbf{y})$, we can use the following Gaussian distribution
-\begin{equation}
-p(\omega_1 \vert \mathbf{x}, \mathbf{y}) = \mathcal{N}\left(\omega_1 \vert \mu_{\omega_1}, \Sigma_{\omega_{1,1}}) \right).
-\end{equation}
-Finally, to calculate the probability $P(y > 8 \vert x = 0.5, \mathbf{x}, \mathbf{y})$, we can use the posterior predictive distribution 
-\begin{equation}
-p(y \vert x = 0.5, \mathbf{x}, \mathbf{y}, \alpha, \beta) = \mathcal{N}(y \vert \boldsymbol\mu^{T}_{\boldsymbol\omega} \boldsymbol\phi(0.5), \sigma_p(0.5)^2)
-\end{equation}
-
-Note that our standard definition of probability is $P(x \leq a) = F_x(a)$. The probabilities of interest here, however, are $P(x > a)$ which can be expressed as
-\begin{equation}
-P(x > a) = 1 - P(x \leq a).
-\end{equation}
-The first probability $P(\omega_1 > 8)$ was found to be $P(\omega_1 > 8) = 1 - 0.5101 = 0.4899$. The second probability $P(\omega_1 > 8 \vert \mathbf{x}, \mathbf{y})$ of interest was found to be $P(\omega_1 > 8 \vert \mathbf{x}, \mathbf{y}) = 1 - 0.1561 = 0.8439$. The final probability of interest is $P(y > 8 \vert x = 0.5, \mathbf{x}, \mathbf{y})$ and this was determined to be $P(y > 8 \vert x = 0.5, \mathbf{x}, \mathbf{y}) = 1 - 0.4608 = 0.5392$. In Figure \ref{fig:Q2_CDFs} the CDFs of the prior, posterior and posterior-predictive distributions are shown. It is clear from Figure \ref{fig:Q2_CDFs}a) that the variance in the prior distribution is significant. This is expected as the ratio $\frac{1}{\alpha} = 10^5$. Thus, unless we evaluate the probability at the extremities of the prior, the probability will be close to 0.5. Hence the $\omega_1$ parameter can be sampled from an extensive range when using the prior. From Figure \ref{fig:Q2_CDFs}b), it is clear that the posterior distribution has a reduced variance. As such, the probability that the $\omega_1 > 8$ indicates that the parameter value is more likely to be larger than 8. Finally, as seen in Figure \ref{fig:Q2_CDFs}c), the posterior predictive distribution at $x = 0.5$ gives a distribution over $y$ that appears to be centred at 8. Hence, evaluating the probability that $y > 8$ returns a value close of 0.5, which indicates that a value of $y=8$ is highly likely at $x = 0.5$.
-\begin{figure}[htb!]
-     \centering
-     \begin{subfigure}[b]{0.3\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Q2_9.pdf}
-         \caption{prior distribution.}
-     \end{subfigure}
-     ~
-     \begin{subfigure}[b]{0.3\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Q2_10.pdf}
-         \caption{posterior distribution.}
-     \end{subfigure}
-     ~
-     \begin{subfigure}[b]{0.3\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Q2_11.pdf}
-         \caption{posterior-predictive distribution.}
-     \end{subfigure}
-     
-     \caption{The CDFs of the prior, posterior, and posterior predictive distributions.}
-     \label{fig:Q2_CDFs}
-\end{figure}
-
-\subsubsection{The model evidence}
-In \citeauthor*{bishop2006} \cite{bishop2006}, the model evidence is given by
-\begin{equation}
-\ln p(\mathbf{y} \vert \alpha, \beta) = \frac{M}{2}\cdot \ln\alpha + \frac{N}{2}\cdot \ln \beta - E\left(\boldsymbol\mu_{\boldsymbol\omega}\right) - \frac{1}{2}\cdot \ln \vert \boldsymbol\Sigma^{-1}_{\boldsymbol\omega} \vert - \frac{N}{2}\cdot \ln (2 \cdot \pi),
-\end{equation}
-where $E\left(\boldsymbol\mu_{\boldsymbol\omega}\right)$ is given by
-\begin{equation}
-E\left(\boldsymbol\mu_{\boldsymbol\omega}\right) = \frac{\beta}{2} \Vert \mathbf{y} - \boldsymbol\Phi\boldsymbol\mu_{\boldsymbol\omega} \Vert_2^2 + \frac{\alpha}{2}\cdot \boldsymbol\mu_{\boldsymbol\omega}^T\boldsymbol\mu_{\boldsymbol\omega}.
-\end{equation}
-
-In Figure \ref{fig:Q2_evidence} the model evidence for different model orders and different values of the hyper-parameter $\alpha$ are shown. It is clear from Figure \ref{fig:Q2_evidence} that the parameter $\alpha$ has little to no sensitivity on the optimal model order until $\alpha = 0.1$. From this point, a higher model order is found to be desirable by the model evidence. This is attributed to the nature in which the  $\alpha$ hyper-parameter regularises the Bayesian inference process, and hence once this regularisation is strong, models with more flexibility are needed to overcome the effects of regularisation.
-\begin{figure}[htb!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Q2_12.pdf}
-         \caption{The model evidence.}
-     \end{subfigure}
-     ~
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Q2_13.pdf}
-         \caption{Optimal order versus $\alpha$.}
-     \end{subfigure}
-     
-     \caption{The model evidence for different values of $\alpha$. In a) the model evidence is shown, and in b) the model order that maximises the model evidence for each value of $\alpha$ is plotted. }
-     \label{fig:Q2_evidence}
-\end{figure}
-
-\subsubsection{Introducing sparsity}
-Sparsity, in Bayesian inference, may be introduced to the model parameters through choices in the prior or through careful selection of the prior hyper-parameters. As was seen in this problem, if we increase $\alpha$ to a point where the prior variance is small, the resulting posterior predictive distribution and the MAP estimates of the model parameters is sparse. Alternatively, we could use a prior that is naturally sparse (i.e., it is strongly centered around zero) such as a Laplacian prior. The idea of sparsity is linked to regularisation, whereby the model parameters are constrained to ensure that the model does not overfit to the observed data. I would recommend looking into Laplacian priors or using the hyper-parameter $\alpha$ if one wishes to introduce sparsity into the Bayesian linear regression process.
-
-Inducing sparsity differs from model evidence selection through the way that it interacts with the posterior distribution. A sparse prior, for example, has a direct influence on the posterior distribution, whereas the model evidence is the maximisation of the marginal likelihood function over the observed data for different model orders. While the posterior distribution does feature in this marginal likelihood, the prior has directly affects the methods used to determine the posterior distribution. 
+As before, the prior hyper-parameters influence the distributions obtained through the Bayesian inference process. The effects of $\alpha$ will be 
 
 \clearpage
 
