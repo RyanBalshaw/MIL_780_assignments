@@ -592,6 +592,102 @@ sorting=none]{biblatex}
 	
 	\section{Question 4}
 	
+	Consider an application where there are $N$ shaft sections over one rotation, and $M$ shaft rotations. The model of interest, for the shaft rotation $\theta(t)$ is discretised over time into sectional domains. This discretisation is facilitated through cubic splines [CITE] and is given by a peicewise function of the form
+	\begin{equation}
+		\theta(t) = \begin{cases} 
+			\theta_{1}(t) &  t_{1} \leq x \leq t_2, \\
+			\theta_{2}(t) &  t_{2} \leq x \leq t_3, \\
+			\vdots \\
+			\theta_{K}(t) &  t_{K-1} \leq x \leq t_K, \\
+		\end{cases},
+	\end{equation}
+	where $K$ is the number of sections over the whole domain of interest, $\theta_{k}(t), k = 1, \cdots, K$ are polynomials, and $t \in [t_1, t_K]$ is the time over the whole domain. In this application, we introduce notation to distinguish between the $K$ polynomials. This notation utilises the problem-specific information that the domain of interest has a fixed number of rotations $M$ and a fixed number of sections per rotation $M$. Hence, the number of piecewise polynomials $K$ becomes $K = NM$. For the $n^{th}$ section in the $m^{th}$ shaft rotation ($n = 1, \cdots N$, $m = 1 \cdots, M$), the $nm^{th}$ polynomial is given as
+	\begin{equation}
+		\theta_{nm}(t) = a_{nm} + b_{nm} \cdot \left(t - t_{nm} \right) + c_{nm} \cdot \left(t - t_{nm} \right)^2 + d_{nm} \cdot \left( t - t_{nm}\right)^3,
+	\end{equation}
+	where the time over the $nm^{th}$ polynomial is $t \in [t_{nm}, t_{(n + 1)m}]$. For the considered problem, each piecewise polynomial has $4$ unknowns, and a result there are $4NM$ unknowns. Furthermore, let the change in time over one cubic spline index be
+	\begin{equation}
+		T_{nm} = t_{(n + 1)m} - t_{nm},
+	\end{equation}
+	where $t_{nm}$ and $t_{(n + 1)m}$ are the start and endpoints respectively of the considered spline. $T_{nm}$ represents the time period between two consecutive zero-crossing times. The first and second derivatives of the $\theta_{nm}(t)$ polynomial is
+	\begin{equation}
+		\dot{\theta}_{nm}(t) = b_{nm} + 2 \cdot c_{nm} \cdot \left(t - t_{nm} \right) + 3 \cdot d_{nm} \cdot \left( t - t_{nm}\right)^2,
+	\end{equation}
+	\begin{equation}
+		\ddot{\theta}_{nm}(t) = 2 \cdot c_{nm} + 6 \cdot d_{nm} \cdot \left( t - t_{nm}\right),
+	\end{equation}
+	
+	The issue here, is that the conventional approach to applying cubic splines cannot be used, as we do not know any function value information of the shaft rotation. However, I believe that one can utilise domain knowledge to ensure that a linear system of equations is found. Our assumptions are as follows:
+	\begin{enumerate}
+		\item The shaft speed is initialised at $\theta(0) = 0$ and ends at $\theta(T_{(N + 1)M}) = M \cdot 2 \pi$.
+		\item The discretisation is a continuous function through time.
+		\item Each shaft section distance remains constant for all $M$ rotations.
+		\item The sum of all $N$ sections add up to one revolution, or $2\pi$ radians.
+	\end{enumerate}
+
+	Using these assumptions, let's try to obtain a system of equations that can we can solve. The first, and perhaps most obvious relationship is that the angular rotation between one segment and the next must be equal. This is done to ensure that the angular displacement is consistent between each polynomial. This is given, generally, by
+	\begin{equation}
+		\begin{aligned}[b]
+			&\theta_{nm}(t_{(n+1)m}) = \theta_{(n+1)m}(t_{(n + 1)m}) \\
+			&a_{nm} + b_{nm}\cdot T_{nm} + c_{nm}\cdot T_{nm}^2 + d_{nm}\cdot T_{nm}^3 = a_{(n+1)m} \\
+			&a_{nm} - a_{(n+1)m} + b_{nm}\cdot T_{nm} + c_{nm}\cdot T_{nm}^2 + d_{nm}\cdot T_{nm}^3 = 0.
+		\end{aligned}
+	\end{equation}
+	The angular rotation relationship gives $NM-1$ equations. The second relationship is the angular velocity (shaft speed) consistency relationship. This enforces that the shaft speed from one section to the next must be continuous. This is given through
+	\begin{equation}
+	\begin{aligned}[b]
+		&\dot{\theta}_{nm}(t_{(n+1)m}) = \dot{\theta}_{(n+1)m}(t_{(n + 1)m}) \\
+		&b_{nm} + 2 \cdot c_{nm}\cdot T_{nm} + 3 \cdot d_{nm}\cdot T_{nm}^2 = b_{(n+1)m} \\
+		&b_{nm} - b_{(n+1)m} + 2 \cdot c_{nm}\cdot T_{nm} + 3 \cdot d_{nm}\cdot T_{nm}^2 = 0
+	\end{aligned}
+	\end{equation}
+	The angular speed consistency relationship gives $NM-1$ equations. The third relationship is the angular acceleration consistency relationship, which requires the angular acceleration from one section to the next to be continuous. This is given through
+	\begin{equation}
+		\begin{aligned}[b]
+			\ddot{\theta}_{nm}(t_{(n+1)m}) &= \ddot{\theta}_{(n+1)m}(t_{(n + 1)m}) \\
+			2 \cdot c_{nm} + 6 \cdot d_{nm}\cdot T_{nm} &= c_{(n+1)m} \\
+			2 \cdot c_{nm} - c_{(n+1)m} + 6 \cdot d_{nm}\cdot T_{nm} &= 0 
+		\end{aligned}
+	\end{equation}
+
+	The angular speed consistency relationship gives $NM-1$ equations. Before I continue with other relationships, let's take a step back and evaluate what we have done and where we are going. The equations that have been developed detail how to enforce consistency in between the polynomials, but they do not enforce consistency at the start or end points. To ensure that we have starting point consistency, it is enforced that 
+	\begin{equation}
+		\begin{aligned}
+		\theta_{1, 1}(t_{11}) = 0,
+		\end{aligned}
+	\end{equation} 
+	
+	
+	Then, borrowing a decision from cubic spline literature, it is enforced that
+	\begin{equation}
+		\begin{aligned}
+			\ddot{\theta}_{11}(t_{11}) &= 0 \\
+			2 \cdot c_{11}  = 0
+		\end{aligned}
+	\end{equation}
+	\begin{equation}
+		\begin{aligned}
+			\ddot{\theta}_{NM}(t_{(N + 1)M}) &= 0 \\
+			2 \cdot c_{NM} + 6 \cdot d_{NM} T_{NM} &= 0
+		\end{aligned}
+	\end{equation}
+	which is a natural cubic spline approximation (i.e., the second derivatives at the endpoints are zero). At this point, the process has given us $3NM$ equations that can be used. To finalise the set of equations, I exploit points three and four of the assumptions made. These are used to ensure that the angular sectional increment distance is consistent with the known properties of the system. The first constraint is
+	\begin{equation}
+		\begin{aligned}
+			\int_{t_{nm}}^{t_{(n+1)m}} \dot{\theta}_{nm}dt &= \int_{t_{n(m + 1)}}^{t_{(n+1)(m + 1)}} \dot{\theta}_{n(m + 1)}dt \\
+			b_{nm} \cdot T_{nm} + c_{nm} \cdot T_{nm}^2 + d_{nm} \cdot T_{nm}^3 &= b_{n(m+1)} \cdot T_{n(m+1)} + c_{n(m+1)} \cdot T_{n(m+1)}^2 + d_{n(m+1)} \cdot T_{n(m+1)}^3
+		\end{aligned}
+	\end{equation} 
+	where this constraint is applied to each $N$ section $M-1$ times. To resolve the final constraint, we must enforce that the total angular distance covered in one rotation is 
+	\begin{equation}
+		\begin{aligned}
+		\sum_{n=1}^{N} \int_int_{t_{nm}}^{t_{(n+1)m}} \dot{\theta}_{nm}dt &= 2 \cdot \pi \\
+		\sum_{n=1}^{N} \left[ b_{nm} \cdot T_{nm} + c_{nm} \cdot T_{nm}^2 + d_{nm} \cdot T_{nm}^3 \right] &= 2 \cdot \pi.
+		\end{aligned}
+	\end{equation}
+	where this equation need only be applied to one rotation ($m = 1$) as the consistent angular increment constraint ensures that all other sections are constrained in the same manner. Hence, we should be able to resolve a system of equations that is uniquely solvable.
+	
+	\iffalse
 	Dear Dr. Schmidt, 
 	
 	I have an additional 30 minutes to add in some comments about the fourth question, I figured that I may as well waste my own time and explain my struggles with the fourth question. Before I get into this, I would just like to apologise for needing extra time to finish the assignment, I have no excuses and I am embarrassed that I am in this situation. Please just give me zero for this section and move on with your other work.
@@ -608,6 +704,8 @@ sorting=none]{biblatex}
 	Thanks,
 	
 	Ryan
+	\fi
+	
 	
 	\clearpage
 	
