@@ -591,6 +591,12 @@ sorting=none]{biblatex}
 	\clearpage
 	
 	\section{Question 4}
+	My chosen paper was:
+	\begin{itemize}
+		\item Diamond DH, Heyns PS, Oberholster AJ (2016) Online shaft encoder geometry compensation for arbitrary shaft speed profiles using Bayesian regression. Mech. Syst. Signal Process. 81:402–418
+	\end{itemize}
+	
+	The reason here was simple: I have used the method in this paper in both my Masters and my PhD, and I believe that it is applicable and important to the field. This approach, hereafter referred to as BCG, is based on cubic-spline polynomial regression (to some extent) implementation with a Bayesian regression posterior distribution update step to encode some prior information into the problem. In this problem, I chose to explore whether the system of equations is indeed underdetermined, and established a procedure which produces a unique solution. I then conducted a comparison to [CITE]. Let's begin.
 	
 	Consider an application where there are $N$ shaft sections over one rotation, and $M$ shaft rotations. The model of interest, for the shaft rotation $\theta(t)$ is discretised over time into sectional domains. This discretisation is facilitated through cubic splines [CITE] and is given by a peicewise function of the form
 	\begin{equation}
@@ -601,11 +607,11 @@ sorting=none]{biblatex}
 			\theta_{K}(t) &  t_{K-1} \leq x \leq t_K, \\
 		\end{cases},
 	\end{equation}
-	where $K$ is the number of sections over the whole domain of interest, $\theta_{k}(t), k = 1, \cdots, K$ are polynomials, and $t \in [t_1, t_K]$ is the time over the whole domain. In this application, we introduce notation to distinguish between the $K$ polynomials. This notation utilises the problem-specific information that the domain of interest has a fixed number of rotations $M$ and a fixed number of sections per rotation $M$. Hence, the number of piecewise polynomials $K$ becomes $K = NM$. For the $n^{th}$ section in the $m^{th}$ shaft rotation ($n = 1, \cdots N$, $m = 1 \cdots, M$), the $nm^{th}$ polynomial is given as
+	where $K$ is the number of sections over the whole domain of interest, $\theta_{k}(t), k = 1, \cdots, K$ are polynomials, the time points $t_i$ refer to the zero-crossing time (i.e., the time where one section ends and another begins), and $t \in [t_1, t_K]$ is the time over the whole domain. In this application, we introduce notation to distinguish between the $K$ polynomials. This notation utilises the problem-specific information that the domain of interest has a fixed number of rotations $M$ and a fixed number of sections per rotation $M$. Hence, the number of piecewise polynomials $K$ becomes $K = NM$. For the $n^{th}$ section in the $m^{th}$ shaft rotation ($n = 1, \cdots N$, $m = 1 \cdots, M$), the $nm^{th}$ polynomial is given as
 	\begin{equation}
 		\theta_{nm}(t) = a_{nm} + b_{nm} \cdot \left(t - t_{nm} \right) + c_{nm} \cdot \left(t - t_{nm} \right)^2 + d_{nm} \cdot \left( t - t_{nm}\right)^3,
 	\end{equation}
-	where the time over the $nm^{th}$ polynomial is $t \in [t_{nm}, t_{(n + 1)m}]$. For the considered problem, each piecewise polynomial has $4$ unknowns, and a result there are $4NM$ unknowns. Furthermore, let the change in time over one cubic spline index be
+	where the time over the $nm^{th}$ polynomial is $t \in [t_{nm}, t_{(n + 1)m}]$. A naive approach is to assume that $\theta_{nm}$ is constant and set to $\frac{2\cdot\pi}{N}$. In this naive setting, each increment is equispaced over the domain. However, as discussed in [CITE], this is too naive for practical purposes. Hence, we assume that the domain is broken up into sections and we exploit the physics of the problem to try and solve for the equations. For the considered problem, each piecewise polynomial has $4$ unknowns, and a result there are $4NM$ unknowns over the whole domain. Furthermore, let the change in time over one cubic spline index be
 	\begin{equation}
 		T_{nm} = t_{(n + 1)m} - t_{nm},
 	\end{equation}
@@ -657,7 +663,6 @@ sorting=none]{biblatex}
 		\end{aligned}
 	\end{equation} 
 	
-	
 	Then, borrowing a decision from cubic spline literature, it is enforced that
 	\begin{equation}
 		\begin{aligned}
@@ -678,14 +683,232 @@ sorting=none]{biblatex}
 			b_{nm} \cdot T_{nm} + c_{nm} \cdot T_{nm}^2 + d_{nm} \cdot T_{nm}^3 &= b_{n(m+1)} \cdot T_{n(m+1)} + c_{n(m+1)} \cdot T_{n(m+1)}^2 + d_{n(m+1)} \cdot T_{n(m+1)}^3
 		\end{aligned}
 	\end{equation} 
-	where this constraint is applied to each $N$ section $M-1$ times. To resolve the final constraint, we must enforce that the total angular distance covered in one rotation is 
-	\begin{equation}
+	where this constraint is applied to each $N$ section $M-1$ times, or $MN - N$ equations. To resolve the final set of constraints, it must be enforced that the amount of distance travelled in the first rotation be proportional to the time ratio for in one rotation. This is achieved through the equation
+	\begin{equation}\label{eq:poor_assumption}
 		\begin{aligned}
-		\sum_{n=1}^{N} \int_int_{t_{nm}}^{t_{(n+1)m}} \dot{\theta}_{nm}dt &= 2 \cdot \pi \\
-		\sum_{n=1}^{N} \left[ b_{nm} \cdot T_{nm} + c_{nm} \cdot T_{nm}^2 + d_{nm} \cdot T_{nm}^3 \right] &= 2 \cdot \pi.
+		\int_{t_{nm}}^{t_{(n+1)m}} \dot{\theta}_{nm}dt &= 2 \cdot \pi \cdot \frac{T_{nm}}{\sum_{n=1}^{N}T_{nm}} \\
+		b_{nm} \cdot T_{nm} + c_{nm} \cdot T_{nm}^2 + d_{nm} \cdot T_{nm}^3 &= 2 \cdot \pi \cdot \frac{T_{nm}}{\sum_{n=1}^{N}T_{nm}}.
 		\end{aligned}
 	\end{equation}
-	where this equation need only be applied to one rotation ($m = 1$) as the consistent angular increment constraint ensures that all other sections are constrained in the same manner. Hence, we should be able to resolve a system of equations that is uniquely solvable.
+	where this equation need only be applied to each of the $N$ sections (i.e., $N$ times) in one rotation ($m = 1$) as the consistent angular increment constraint ensures that all other sections are constrained in the same manner. Hence, we should be able to resolve a system of equations that is uniquely solvable. 
+	
+	To estimate the shaft speed, the total angular increment $\theta_{n} = b_{nm} \cdot T_{nm} + c_{nm} \cdot T_{nm}^2 + d_{nm} \cdot T_{nm}^3$ is used through
+	\begin{equation}\label{eq:speed}
+		\omega_n = \frac{\theta_n}{T_{nm}}.
+	\end{equation}
+	I realise that this notation may be confusing, as all that has happened is that I have dropped the subscript $m$. However, [CITE] uses this notation, and for consistency this notation is preserved. To quantify how this approach performs, three investigations are performed. The first is the simple process of estimating the shaft speed for a system with constant operating conditions. In the second investigation, a comparison is conducted on the examples from [CITE]. Finally, the performance of the BGC approach is compared to the approach with a unique solution. Henceforth, the unique solution case will be referred to as the \texttt{Uniquely solvable} approach. 
+	
+	\subsection{Investigation 1}
+	
+	Consider an application where the pulse points for the $m^{th}$ rotation are given at
+	\begin{equation}
+		t_{pulse}(m) = [m, m + \frac{1}{4}, m + \frac{3}{4}, 2 \cdot m].
+	\end{equation}
+	In this setting, the pulse points describe a rotating system where the shaft speed is constant as they are immutable and hence there is no change in velocity. Such a system is seen in Figure\ref{fig:Q4_constant}(a). The solution for the \texttt{Uniquely solvable} process is seen in Figure \ref{fig:Q4_constant}(a). It is clear that under an such a rotating system, the \texttt{Uniquely solvable} process can estimate the shaft speed exactly.
+	\begin{figure}[htb!]
+		\centering
+		\includegraphics[scale=0.4]{Q4_1.png}
+		\caption{The results for the naive speed estimation problem (equispaced increments) versus the unique solution case.}
+		\label{fig:Q4_constant}
+	\end{figure}
+
+	\subsection{Investigation 2}
+	
+	For the second investigation, the BGC methodology was compared to the \texttt{Uniquely solvable} process. The analysis procedure followed in [CITE] is used to facilitate this comparison. This requires two steps, \emph{i)} generation of the underlying pulse increments, and \emph{ii)} a set of trail shaft speed profiles. The underlying pulse increments is retained through each of the trail speed profiles, to simulate an asset under different operating conditions. As the shaft speed profiles are parametrised with numerical functions, it is trivial to obtain the zero-crossing times through numerical integration. In Figure \ref{fig:Q4_increments} the angular increment sizes for the problem considered are shown. The increment size was obtained by sampling $N-1$ points from a Gaussian distribution 
+	\begin{equation}
+		\theta_n \sim \mathcal{N}(\frac{2\cdot\pi}{N}, \frac{1}{N^2}),
+	\end{equation} 
+	and then using the final point to ensure that $\sum_{n=1}^{N}\theta_n = 2\cdot \pi$. As such, the final increment size is found through 
+	\begin{equation}
+		\theta_N = 2\cdot \pi - \sum_{n}^{N-1}\theta_n.
+	\end{equation}
+	\begin{figure}[htb!]
+		\centering
+		\includegraphics[scale=0.6]{Q4_2.png}
+		\caption{The actual angular increment sizes used for the speed estimation comparison problem.}
+		\label{fig:Q4_increments}
+	\end{figure}
+
+	For the second step of the comparison function, four trial speed profiles are considered. These are given through
+	\begin{equation}
+		\omega_1(t) = 100 + 10 \cdot t,
+	\end{equation}
+	\begin{equation}
+		\omega_2(t) = 100 + 5 \cdot \sin \left(2\cdot \pi \cdot 30 \cdot t \right),
+	\end{equation}
+	\begin{equation}
+		\omega_3(t) = 100 + 10 \cdot t + 5 \cdot \sin \left(2\cdot \pi \cdot 30 \cdot t \right),
+	\end{equation}
+	\begin{equation}
+		\omega_4(t) = 100 + 5 \cdot \sin \left(2\cdot \pi \cdot 30 \cdot t \right) + 4 \cdot \sin \left(2\cdot \pi \cdot 45 \cdot t \right) + 2 \cdot \sin \left(2\cdot \pi \cdot 20 \cdot t \right).
+	\end{equation}
+	
+	Finally, to compare between the BGC results to the \texttt{Uniquely solvable} results, the sum of squared errors is used. I chose to use the sum as the increment size is already small, and hence the mean squared error is not representative enough of the difference in performance. The squared error between the actual angular increments and the estimated increments is given through
+	\begin{equation}
+		E = \sum_{n=1}^{N} \left( \theta_{n}^{\text{actual}} - \theta_{n}^{\text{approximated}} \right)^2.
+	\end{equation}
+	
+	In Figure \ref{fig:Q4_actual} the true shaft profiles for the considered problem are shown. In Figure \ref{fig:Q4_estimated_profiles_me} the shaft profiles found through the \texttt{Uniquely solvable} procedure are shown. In Figure \ref{fig:Q4_estimated_profiles_BGC} the shaft profiles found through the BGC procedure are shown. In the comparison between Figures \ref{fig:Q4_estimated_profiles_me} and \ref{fig:Q4_estimated_profiles_BGC}, it is clear that both procedures cannot accurately estimate the true underlying shaft speed. There are obvious deviations between the true and estimated shaft profiles. This is attributed to the estimation error that is present in both procedures, and the nature of the estimation comparison process, where the latter relies on Equation \eqref{eq:speed} to visualise the estimated shaft speed. Perhaps, for visualisation purposes, it would have been better to use the cubic spline polynomials as all of the unknowns were solved for.
+	\begin{figure}[htb!]
+		\centering
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Q4_f1_1.png}
+			\caption{Profile 1.}
+		\end{subfigure}
+		~
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Q4_f2_1.png}
+			\caption{Profile 2.}
+		\end{subfigure}
+		
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Q4_f3_1.png}
+			\caption{Profile 3.}
+		\end{subfigure}
+		~
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Q4_f4_1.png}
+			\caption{Profile 4.}
+		\end{subfigure}
+	
+		\caption{The actual speed profiles for the considered problem.}
+		\label{fig:Q4_profiles}
+	\end{figure}
+
+	In Figure \ref{fig:Q4_estimated_profiles_me}, it is clear that in the first portion of the estimated speed profiles are constant. This is the crucial flaw in the \texttt{Uniquely solvable} solution and are a direct consequence of the assumption made in Equation \eqref{eq:poor_assumption}. To elaborate, consider the combination of Equations \eqref{eq:poor_assumption}  and \eqref{eq:speed}. The shaft speed, for the first ($m=1$) rotation, is given through
+	\begin{equation}
+		\begin{aligned}
+			\omega_n &= \frac{2\cdot\pi \cdot T_{nm}}{T_{nm}\cdot \sum_{n=1}^{N}T_{nm}} \\
+			&= \frac{2\cdot\pi}{\sum_{n=1}^{N}T_{nm}},
+		\end{aligned}
+	\end{equation}
+	which makes the flaws of the assumption required for Equation \eqref{eq:poor_assumption} clear. To the detriment of the \texttt{Uniquely solvable} solution, the assumption in Equation \eqref{eq:poor_assumption} enforces that . One may wonder why the angular sectional distance for the remaining sections do not resemble the first rotation. This, at the time of writing this part of the report, escapes me a little. 
+	\begin{figure}[htb!]
+		\centering
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Q4_f1_2.png}
+			\caption{Estimated profile 1.}
+		\end{subfigure}
+		~
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Q4_f2_2.png}
+			\caption{Estimated profile 2.}
+		\end{subfigure}
+		
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Q4_f3_2.png}
+			\caption{Estimated profile 3.}
+		\end{subfigure}
+		~
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Q4_f4_2.png}
+			\caption{Estimated profile 4.}
+		\end{subfigure}
+		
+		\caption{The estimated shaft profiles for the process I attempted. Notice how each profile has a section in the beginning that is constant. This is a result of the assumption in Equation \eqref{eq:poor_assumption}.}
+		\label{fig:Q4_estimated_profiles_me}
+	\end{figure}
+	
+	\begin{figure}[htb!]
+		\centering
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Q4_f1_3.png}
+			\caption{Estimated profile 1.}
+		\end{subfigure}
+		~
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Q4_f2_3.png}
+			\caption{Estimated profile 2.}
+		\end{subfigure}
+		
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Q4_f3_3.png}
+			\caption{Estimated profile 3.}
+		\end{subfigure}
+		~
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Q4_f4_3.png}
+			\caption{Estimated profile 4.}
+		\end{subfigure}
+		
+		\caption{The estimated shaft profiles for the process presented in [CITE].}
+		\label{fig:Q4_estimated_profiles_BGC}
+	\end{figure}
+	
+	In Figure \ref{fig:Q4_increments} the true and approximated angular increments are shown. It is clear that for all of the considered speed profiles that the \texttt{Uniquely solvable} solution is not as accurate as BGC. To further emphasise this point, consider the sum-of-square-errors shown in Table \ref{tab:total_squared_error} for each speed profile. It is clear that the \texttt{Uniquely solvable} solution always has the greater error.
+	\begin{figure}[htb!]
+		\centering
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Q4_f1_4.png}
+			\caption{Profile 1 increments.}
+		\end{subfigure}
+		~
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Q4_f2_4.png}
+			\caption{Profile 2 increments.}
+		\end{subfigure}
+		
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Q4_f3_4.png}
+			\caption{Profile 3 increments.}
+		\end{subfigure}
+		~
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Q4_f4_4.png}
+			\caption{Profile 4 increments.}
+		\end{subfigure}
+		
+		\caption{The section angular increment sizes for the four profiles analysed.}
+		\label{fig:Q4_sections}
+	\end{figure}
+
+	\begin{table}[]
+		\centering
+		\caption{The total squared error between the actual section angular increment size and the estimated size.}
+		\label{tab:total_squared_error}
+		\begin{tabular}{@{}ccccc@{}}
+			\toprule
+			& Speed profile 1 & Speed profile 2 & Speed profile 3 & Speed profile 4 \\ \midrule
+			My implementation & 0.8247 & 0.7658 & 0.8969 & 0.7561 \\
+			Diamond implementation & 0.81220 & 0.7267 & 0.8137 & 0.7190 \\ \bottomrule
+		\end{tabular}
+	\end{table}
+	
+	\subsection{Investigation 3}
+	In the final investigation, a tachometer signal from the C-AIM gearbox dataset was used to compare the two methods. In Figure \ref{fig:Q4_actual_signal_comparison} the results for the two estimation procedures is shown. It is clear that both the methods perform similarly, but the \texttt{uniquely solvable} solution cannot escape the linear angular velocity in the first section. Hence, it is blatantly clear BGC is superior here, and the assumption responsible for Equation \eqref{eq:poor_assumption} must be changed. Thank you for coming to my (rather shitty) TED talk.
+	\begin{figure}[htb!]
+		\centering
+		\begin{subfigure}[b]{0.7\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Q4_3.png}
+			\caption{Estimated profile through the \texttt{uniquely solvable} (left) and BGC (right) procedures.}
+		\end{subfigure}
+		
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Q4_4.png}
+			\caption{Estimated angular sectional increments.}
+		\end{subfigure}
+		
+		\caption{The estimated speed profiles and angular increments for the \texttt{uniquely solvable} and BGC procedures. Note that the naive speed profile, obtained using the assumption that each of the sections are equi-spaced, is plotted in blue in both of the sub-plots in (a).}
+		\label{fig:Q4_actual_signal_comparison}
+	\end{figure}
 	
 	\iffalse
 	Dear Dr. Schmidt, 
