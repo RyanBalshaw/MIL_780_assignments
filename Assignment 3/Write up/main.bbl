@@ -1,0 +1,75 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Diamond2016}{article}{}
+      \name{author}{3}{}{%
+        {{hash=98f6c92e9da46c82cbe935de47770644}{%
+           family={Diamond},
+           familyi={D\bibinitperiod},
+           given={D.\bibnamedelimi H.},
+           giveni={D\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=3cff05db1f1a58a30008b9b01fe6c894}{%
+           family={Heyns},
+           familyi={H\bibinitperiod},
+           given={P.\bibnamedelimi Stephan},
+           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=b2ad130a1d59d7f6c5e09e0e5127ce06}{%
+           family={Oberholster},
+           familyi={O\bibinitperiod},
+           given={A.\bibnamedelimi J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{387d4f5800241f2da7f904df4f3b26d5}
+      \strng{fullhash}{387d4f5800241f2da7f904df4f3b26d5}
+      \strng{bibnamehash}{387d4f5800241f2da7f904df4f3b26d5}
+      \strng{authorbibnamehash}{387d4f5800241f2da7f904df4f3b26d5}
+      \strng{authornamehash}{387d4f5800241f2da7f904df4f3b26d5}
+      \strng{authorfullhash}{387d4f5800241f2da7f904df4f3b26d5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The measurement of instantaneous angular speed is being increasingly investigated for its use in a wide range of condition monitoring and prognostic applications. Central to many measurement techniques are incremental shaft encoders recording the arrival times of shaft angular increments. The conventional approach to processing these signals assumes that the angular increments are equidistant. This assumption is generally incorrect when working with toothed wheels and especially zebra tape encoders and has been shown to introduce errors in the estimated shaft speed. There are some proposed methods in the literature that aim to compensate for this geometric irregularity. Some of the methods require the shaft speed to be perfectly constant for calibration, something rarely achieved in practice. Other methods assume the shaft speed to be nearly constant with minor deviations. Therefore existing methods cannot calibrate the entire shaft encoder geometry for arbitrary shaft speeds. The present article presents a method to calculate the shaft encoder geometry for arbitrary shaft speed profiles. The method uses Bayesian linear regression to calculate the encoder increment distances. The method is derived and then tested against simulated and laboratory experiments. The results indicate that the proposed method is capable of accurately determining the shaft encoder geometry for any shaft speed profile.}
+      \field{issn}{10961216}
+      \field{journaltitle}{Mechanical Systems and Signal Processing}
+      \field{title}{{Online shaft encoder geometry compensation for arbitrary shaft speed profiles using Bayesian regression}}
+      \field{volume}{81}
+      \field{year}{2016}
+      \field{pages}{402\bibrangedash 418}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1016/j.ymssp.2016.02.060
+      \endverb
+      \verb{file}
+      \verb :C$\backslash$:/Users/ryanb.LAPTOP-4EHB9TVB/Documents/Mendeley References/Mechanical Systems and Signal Processing/Diamond, Heyns, Oberholster/Diamond, Heyns, Oberholster{\_}2016{\_}Online shaft encoder geometry compensation for arbitrary shaft speed profiles using Bay.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0888327016001114
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0888327016001114
+      \endverb
+      \keyw{Bayesian regression,Geometry compensation,Instantaneous angular speed,Shaft encoder,Zebra tape}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
